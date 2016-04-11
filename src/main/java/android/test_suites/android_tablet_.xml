@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Smoke Test" verbose="1" thread-count="1">
+
+    <test enabled="true" name="Android Tablet Smoke" preserve-order="true">
+        <classes>
+            <class name="android.tablets.tests.SmokeTest"/>
+            <class name="android.tablets.tests.CriticalPassTest"/>
+            <!--<class name="android.tablets.tests.SandBoxTest"/>-->
+        </classes>
+    </test>
+
+
+</suite>
