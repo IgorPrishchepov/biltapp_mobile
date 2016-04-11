@@ -2,10 +2,10 @@ package android.tablets.tests;
 
 import android.tablets.pages.*;
 import android.tablets.pop_up_menus.*;
-import android.tablets.services.FillTextFieldManager;
-import android.tablets.services.SettingsManager;
-import android.tablets.services.UserActionsManager;
-import android.tablets.services.WaitManager;
+import android.services.FillTextFieldManager;
+import android.tablets.settings_service.SettingsManager;
+import android.services.UserActionsManager;
+import android.services.WaitManager;
 import android.tablets.webviews.WidgetView;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;

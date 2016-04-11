@@ -30,7 +30,7 @@ public class UserActionsManager {
         int startx = (int) (size.width * 0.8);
         int endx = (int) (size.width * 0.20);
         int starty = size.height / 2;
-        getDriver().swipe(startx, starty, endx, starty, 1000);
+        getDriver().swipe(startx, starty, endx, starty, 900);
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
@@ -38,6 +38,18 @@ public class UserActionsManager {
         }
     }
 
+    public void swipeToLeftSmarts() {
+        Dimension size = getDriver().manage().window().getSize();
+        int startx = (int) (size.width * 0.8);
+        int endx = (int) (size.width * 0.20);
+        int starty = size.height / 2;
+        getDriver().swipe(startx, starty, endx, starty, 2000);
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 
     public void swipeToRight() {
         Dimension size = getDriver().manage().window().getSize();

@@ -1,8 +1,8 @@
 package android.tablets.pages;
 
 import android.exceptions.IncorrectElementUINameException;
-import android.tablets.services.UserActionsManager;
-import android.tablets.services.WaitManager;
+import android.services.UserActionsManager;
+import android.services.WaitManager;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
