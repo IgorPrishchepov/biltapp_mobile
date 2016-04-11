@@ -20,7 +20,7 @@ import java.util.Random;
 /**
  * Created by Ihar_Pryshchepau on 3/22/2016.
  */
-public class SmokeTest extends BaseTest {
+public class SmokeTabletTest extends BaseTest {
 
     private int elementIndex = 0;
     private List<MobileElement> listOfAllProducts = null;

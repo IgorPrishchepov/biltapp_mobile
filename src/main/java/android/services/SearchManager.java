@@ -1,4 +1,4 @@
-package android.tablets.services;
+package android.services;
 
 import android.tablets.pages.SearchPage;
 

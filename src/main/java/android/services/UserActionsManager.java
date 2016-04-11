@@ -1,4 +1,4 @@
-package android.tablets.services;
+package android.services;
 
 import android.DriverManager;
 import org.openqa.selenium.Dimension;

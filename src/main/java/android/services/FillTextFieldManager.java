@@ -1,4 +1,4 @@
-package android.tablets.services;
+package android.services;
 
 import android.DriverManager;
 import io.appium.java_client.MobileElement;
