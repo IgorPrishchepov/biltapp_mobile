@@ -1,6 +1,5 @@
 package android.tablets.pages;
 
-import android.exceptions.IncorrectElementUINameException;
 import android.services.UserActionsManager;
 import android.services.WaitManager;
 import io.appium.java_client.MobileElement;
@@ -27,7 +26,7 @@ public class IntroductionPage extends AbstactPage {
         introductionPage.getSkipButton().click();
     }
 
-    public void getToSpecificIntroPage(int pageNumber) throws IncorrectElementUINameException {
+    public void getToSpecificIntroPage(int pageNumber)  {
         WaitManager waitManager = new WaitManager();
         IntroductionPage introductionPage = new IntroductionPage();
         UserActionsManager userActionsManager = new UserActionsManager();

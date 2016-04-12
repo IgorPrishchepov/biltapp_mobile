@@ -505,12 +505,15 @@ public class SmokeTabletTest extends BaseTest {
         modelOverviewPage.getStartAssemblyButton().click();
         waitManager.waitElementToBeClickable(10, modelPlayerPage.getCloseViewerButton());
         modelPlayerPage.getCloseViewerButton().click();
-
+        try {
+            waitManager.waitElementToBeClickable(20, modelOverviewPage.getStartAssemblyButton());
+        }catch (NoSuchElementException ex){
+            modelPlayerPage.getCloseViewerButton().click();
+        }
     }
 
     @Test(testName = "TC BILTAPPTST-297_1", enabled = true, priority = 37, description = "[Android]Product:My Stuff remove model")
     public void myStuffRemoveTest() {
-        waitManager.waitElementToBeClickable(20, modelOverviewPage.getStartAssemblyButton());
         modelOverviewPage.getBackButton().click();
         waitManager.waitElementToBeClickable(10, homePage.getSettingsButton());
         homePage.getMyStuffButton().click();
@@ -704,13 +707,6 @@ public class SmokeTabletTest extends BaseTest {
                 {"x@x.x"},
         };
     }
-
-
-
-
-
-
-
 
 
 }

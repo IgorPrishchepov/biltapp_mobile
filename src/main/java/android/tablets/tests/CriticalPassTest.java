@@ -1,10 +1,13 @@
 package android.tablets.tests;
 
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
 /**
  * Created by Ihar_Pryshchepau on 3/28/2016.
  */
 public class CriticalPassTest extends BaseTest {
-/*
+
     @Test(testName = "TC BILTAPPTST-281_1", enabled = true, priority = 1, description = "Introduction page swipe back")
     public void intoductionPageSwipeBackButtonsTest() {
         introductionPage.skipIntroPage();
@@ -17,5 +20,5 @@ public class CriticalPassTest extends BaseTest {
             introductionPage.getSkipButton().click();
             Assert.assertEquals(result, "Skip");
         }
-    }*/
+    }
 }
