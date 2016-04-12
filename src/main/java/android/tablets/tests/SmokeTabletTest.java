@@ -4,7 +4,7 @@ import android.DriverManager;
 import android.tablets.pop_up_menus.AndroidShareViaMenu;
 import android.tablets.pop_up_menus.SettingsMenu;
 import android.tablets.pop_up_menus.SuggestionBoxMenu;
-import android.tablets.webviews.FacebookView;
+import android.webviews.FacebookView;
 import io.appium.java_client.MobileElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;

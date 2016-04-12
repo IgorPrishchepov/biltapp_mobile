@@ -1,4 +1,4 @@
-package android.tablets.webviews;
+package android.webviews;
 
 import android.tablets.pages.AbstactPage;
 import io.appium.java_client.MobileElement;

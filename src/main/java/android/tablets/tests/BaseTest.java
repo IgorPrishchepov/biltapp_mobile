@@ -6,7 +6,7 @@ import android.services.FillTextFieldManager;
 import android.tablets.settings_service.SettingsManager;
 import android.services.UserActionsManager;
 import android.services.WaitManager;
-import android.tablets.webviews.WidgetView;
+import android.webviews.WidgetView;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
