@@ -1,16 +1,13 @@
 package android.smartphones.pages;
 
-import android.global_pages.AbstractPage;
+import android.global_pages.IntroductionPage;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
 /**
  * Created by Ihar_Pryshchepau on 4/11/2016.
  */
-public class IntroductionPageSmart extends AbstractPage {
-
-    @AndroidFindBy(id = "com.bilt.mobile:id/skipButton")
-    private MobileElement skipButton;
+public class IntroductionPageSmart extends IntroductionPage {
 
     @AndroidFindBy(id = "com.bilt.mobile:id/letsStarted")
     private MobileElement letsGetStartedButton;
@@ -19,7 +16,4 @@ public class IntroductionPageSmart extends AbstractPage {
         return letsGetStartedButton;
     }
 
-    public MobileElement getSkipButton() {
-        return skipButton;
-    }
 }

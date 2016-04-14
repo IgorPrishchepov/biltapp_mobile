@@ -1,7 +1,7 @@
 package android.tablets.settings_service;
 
 import android.DriverManager;
-import android.tablets.pages.HomePage;
+import android.tablets.pages.HomePageTab;
 import android.services.WaitManager;
 
 /**
@@ -9,53 +9,59 @@ import android.services.WaitManager;
  */
 public class SettingsManager {
 
+    public void openMenuItem(int fingers, int x, int y, int duration) throws InterruptedException {
+        DriverManager.getDriver().tap(fingers, x, y, duration);
+    }
+
+    public void openLabMode() {
+        HomePageTab homePageTab = new HomePageTab();
+        new WaitManager().waitElementToBeClickable(10, homePageTab.getSettingsButton());
+        homePageTab.getSettingsButton().click();
+        for (int i = 0; i < 5; i++) {
+            DriverManager.getDriver().tap(1, 40, 900, 1);
+        }
+    }
+
     public void openLicenses() {
-        HomePage homePage = new HomePage();
-        new WaitManager().waitElementToBeClickable(10, homePage.getSettingsButton());
-        homePage.getSettingsButton().click();
+        HomePageTab homePageTab = new HomePageTab();
+        new WaitManager().waitElementToBeClickable(10, homePageTab.getSettingsButton());
+        homePageTab.getSettingsButton().click();
         DriverManager.getDriver().tap(1, 40, 800, 1);
     }
 
-    public void openSettings() {
-        HomePage homePage = new HomePage();
-        new WaitManager().waitElementToBeClickable(10, homePage.getSettingsButton());
-        homePage.getSettingsButton().click();
+    public void openIntroductionPage() {
+        HomePageTab homePageTab = new HomePageTab();
+        new WaitManager().waitElementToBeClickable(10, homePageTab.getSettingsButton());
+        homePageTab.getSettingsButton().click();
         DriverManager.getDriver().tap(1, 40, 700, 1);
     }
 
-    public void openIntroductionPage() {
-        HomePage homePage = new HomePage();
-        new WaitManager().waitElementToBeClickable(10, homePage.getSettingsButton());
-        homePage.getSettingsButton().click();
+    public void openSuggestionsBox() {
+        HomePageTab homePageTab = new HomePageTab();
+        new WaitManager().waitElementToBeClickable(10, homePageTab.getSettingsButton());
+        homePageTab.getSettingsButton().click();
         DriverManager.getDriver().tap(1, 40, 600, 1);
     }
 
-    public void openSuggestionsBox() {
-        HomePage homePage = new HomePage();
-        new WaitManager().waitElementToBeClickable(10, homePage.getSettingsButton());
-        homePage.getSettingsButton().click();
+    public void openPrivacyStatement() {
+        HomePageTab homePageTab = new HomePageTab();
+        new WaitManager().waitElementToBeClickable(10, homePageTab.getSettingsButton());
+        homePageTab.getSettingsButton().click();
         DriverManager.getDriver().tap(1, 40, 500, 1);
     }
 
-    public void openPrivacyStatement() {
-        HomePage homePage = new HomePage();
-        new WaitManager().waitElementToBeClickable(10, homePage.getSettingsButton());
-        homePage.getSettingsButton().click();
+    public void openTermsOfUse() {
+        HomePageTab homePageTab = new HomePageTab();
+        new WaitManager().waitElementToBeClickable(10, homePageTab.getSettingsButton());
+        homePageTab.getSettingsButton().click();
         DriverManager.getDriver().tap(1, 40, 400, 1);
     }
 
-    public void openTermsOfUse() {
-        HomePage homePage = new HomePage();
-        new WaitManager().waitElementToBeClickable(10, homePage.getSettingsButton());
-        homePage.getSettingsButton().click();
-        DriverManager.getDriver().tap(1, 40, 300, 1);
-    }
-
     public void openSignIn() {
-        HomePage homePage = new HomePage();
-        new WaitManager().waitElementToBeClickable(10, homePage.getSettingsButton());
-        homePage.getSettingsButton().click();
-        DriverManager.getDriver().tap(1, 40, 200, 1);
+        HomePageTab homePageTab = new HomePageTab();
+        new WaitManager().waitElementToBeClickable(10, homePageTab.getSettingsButton());
+        homePageTab.getSettingsButton().click();
+        DriverManager.getDriver().tap(1, 40, 300, 1);
     }
 
 

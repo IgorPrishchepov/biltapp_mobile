@@ -1,11 +1,15 @@
 package android.tablets.tests;
 
-import android.tablets.pages.*;
-import android.tablets.pop_up_menus.*;
+import android.global_pages.IntroductionPage;
 import android.services.FillTextFieldManager;
-import android.tablets.settings_service.SettingsManager;
 import android.services.UserActionsManager;
 import android.services.WaitManager;
+import android.tablets.pages.*;
+import android.tablets.pop_up_menus.ForgotPasswordMenu;
+import android.tablets.pop_up_menus.RegistrationMenu;
+import android.tablets.pop_up_menus.SignInMenu;
+import android.tablets.pop_up_menus.SignUpMenu;
+import android.tablets.settings_service.SettingsManager;
 import android.webviews.WidgetView;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -19,7 +23,7 @@ import static android.DriverManager.getDriver;
 public class BaseTest {
 
     protected IntroductionPage introductionPage;
-    protected HomePage homePage;
+    protected HomePageTab homePageTab;
     protected WaitManager waitManager;
     protected UserActionsManager userActionsManager;
     protected SettingsManager settingsManager;
@@ -46,7 +50,7 @@ public class BaseTest {
         introductionPage = new IntroductionPage();
         waitManager = new WaitManager();
         userActionsManager = new UserActionsManager();
-        homePage = new HomePage();
+        homePageTab = new HomePageTab();
         settingsManager = new SettingsManager();
         myStuffPage = new MyStuffPage();
         widgetView = new WidgetView();

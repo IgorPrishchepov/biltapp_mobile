@@ -2,7 +2,7 @@ package android.smartphones.tests;
 
 import android.services.UserActionsManager;
 import android.services.WaitManager;
-import android.smartphones.pages.IntroductionPage;
+import android.smartphones.pages.IntroductionPageSmart;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
@@ -14,7 +14,7 @@ import static android.DriverManager.getDriver;
  */
 public class BaseTest {
 
-    protected IntroductionPage introductionPage;
+    protected IntroductionPageSmart introductionPageSmart;
     protected WaitManager waitManager;
     protected UserActionsManager userActionsManager;
 
@@ -25,7 +25,7 @@ public class BaseTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        introductionPage = new IntroductionPage();
+        introductionPageSmart = new IntroductionPageSmart();
         waitManager = new WaitManager();
         userActionsManager = new UserActionsManager();
     }

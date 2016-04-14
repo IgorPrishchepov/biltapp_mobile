@@ -2,7 +2,6 @@ package android.tablets.tests;
 
 import android.DriverManager;
 import android.tablets.pop_up_menus.AndroidShareViaMenu;
-import android.tablets.pop_up_menus.SettingsMenu;
 import android.tablets.pop_up_menus.SuggestionBoxMenu;
 import android.webviews.FacebookView;
 import io.appium.java_client.MobileElement;
@@ -51,7 +50,7 @@ public class SmokeTabletTest extends BaseTest {
     public void swipeIntroductionLastPageTest() {
         String result = introductionPage.getSkipButton().getText();
         userActionsManager.swipeToLeft();
-        waitManager.waitElementToBeClickable(60, homePage.getSettingsButton());
+        waitManager.waitElementToBeClickable(60, homePageTab.getSettingsButton());
         Assert.assertEquals(result, "Let's get started");
     }
 
@@ -62,7 +61,7 @@ public class SmokeTabletTest extends BaseTest {
             waitManager.waitElementToBeClickable(10, introductionPage.getSkipButton());
             userActionsManager.swipeToLeftNumberOfTimes(i);
             introductionPage.getSkipButton().click();
-            waitManager.waitElementToBeClickable(10, homePage.getSettingsButton());
+            waitManager.waitElementToBeClickable(10, homePageTab.getSettingsButton());
         }
     }
 
@@ -71,7 +70,7 @@ public class SmokeTabletTest extends BaseTest {
         settingsManager.openLicenses();
         String result = widgetView.getTextViewTitle().getText();
         widgetView.getWidgetViewCloseButton().click();
-        waitManager.waitElementToBeClickable(10, homePage.getSettingsButton());
+        waitManager.waitElementToBeClickable(10, homePageTab.getSettingsButton());
         Assert.assertEquals(result, "Licenses");
     }
 
@@ -86,28 +85,12 @@ public class SmokeTabletTest extends BaseTest {
             suggestionBoxMenu.getConfirmButton().click();
             ex.printStackTrace();
         }
-        waitManager.waitElementToBeClickable(10, homePage.getSettingsButton());
+        waitManager.waitElementToBeClickable(10, homePageTab.getSettingsButton());
         settingsManager.openSuggestionsBox();
         String result = suggestionBoxMenu.getMenuTitle().getText();
         suggestionBoxMenu.getMenuCloseButton().click();
-        waitManager.waitElementToBeClickable(10, homePage.getSettingsButton());
+        waitManager.waitElementToBeClickable(10, homePageTab.getSettingsButton());
         Assert.assertEquals(result, "Suggestions Box");
-    }
-
-    @Test(testName = "TC BILTAPPTST-271", enabled = true, priority = 5, description = "Settings menu: Settings")
-    public void settingsMenuSettingsTest() {
-        settingsManager.openSettings();
-        SettingsMenu settingsMenu = new SettingsMenu();
-        String result = settingsMenu.getMenuTitle().getText();
-        settingsMenu.getUrlInputField().sendKeys("test");
-        settingsMenu.getMenuCloseButton().click();
-        settingsManager.openSettings();
-        settingsMenu.getOkSettingsButton().click();
-        waitManager.waitElementToBeClickable(10, homePage.getSettingsButton());
-        settingsManager.openSettings();
-        settingsMenu.getMenuCloseButton().click();
-        waitManager.waitElementToBeClickable(10, homePage.getSettingsButton());
-        Assert.assertEquals(result, "Settings");
     }
 
     @Test(testName = "TC BILTAPPTST-273", enabled = true, priority = 6, description = "Settings menu: Privacy Statement")
@@ -115,7 +98,7 @@ public class SmokeTabletTest extends BaseTest {
         settingsManager.openPrivacyStatement();
         String result = widgetView.getTextViewTitle().getText();
         widgetView.getWidgetViewCloseButton().click();
-        waitManager.waitElementToBeClickable(10, homePage.getSettingsButton());
+        waitManager.waitElementToBeClickable(10, homePageTab.getSettingsButton());
         Assert.assertEquals(result, "Privacy Statement");
     }
 
@@ -124,7 +107,7 @@ public class SmokeTabletTest extends BaseTest {
         settingsManager.openTermsOfUse();
         String result = widgetView.getTextViewTitle().getText();
         widgetView.getWidgetViewCloseButton().click();
-        waitManager.waitElementToBeClickable(10, homePage.getSettingsButton());
+        waitManager.waitElementToBeClickable(10, homePageTab.getSettingsButton());
         Assert.assertEquals(result, "Terms of Use");
     }
 
@@ -133,23 +116,23 @@ public class SmokeTabletTest extends BaseTest {
         settingsManager.openSignIn();
         String result = signInMenu.getMenuTitle().getText();
         signInMenu.getMenuCloseButton().click();
-        waitManager.waitElementToBeClickable(10, homePage.getSettingsButton());
+        waitManager.waitElementToBeClickable(10, homePageTab.getSettingsButton());
         Assert.assertEquals(result, "BILT Sign-In");
     }
 
     @Test(testName = "TC BILTAPPTST-276", enabled = true, priority = 9, description = "My Stuff section: first open")
     public void myStuffIsEmptyTest() {
-        homePage.getMyStuffButton().click();
+        homePageTab.getMyStuffButton().click();
         String result = myStuffPage.getMyStuffIsEmptyMessageOne().getText();
         waitManager.waitElementToBeClickable(10, myStuffPage.getMyStuffHideButton());
         myStuffPage.getMyStuffHideButton().click();
-        waitManager.waitElementToBeClickable(10, homePage.getSettingsButton());
+        waitManager.waitElementToBeClickable(10, homePageTab.getSettingsButton());
         Assert.assertEquals(result, "Nothing to see here... yet.");
     }
 
     @Test(testName = "TC BILTAPPTST-277", enabled = true, priority = 10, description = "Search: search field edit")
     public void searchFieldTitleTest() {
-        homePage.openSearchPage();
+        homePageTab.getYourProductSearchField().click();
         String result = searchPage.getSearchProductTextField().getText();
         Assert.assertEquals(result, "Your Product");
 
@@ -168,13 +151,13 @@ public class SmokeTabletTest extends BaseTest {
     @Test(testName = "TC BILTAPPTST-277", enabled = true, priority = 12, description = "Search: search field edit")
     public void searchFieldCancelTest() {
         searchPage.getCancelSearchButton().click();
-        waitManager.waitElementToBeClickable(10, homePage.getSettingsButton());
+        waitManager.waitElementToBeClickable(10, homePageTab.getSettingsButton());
     }
 
     @Test(testName = "TC BILTAPPTST-278_1,2", enabled = true, priority = 13, dataProvider = "Values for TC BILTAPPTST-278",
             description = "Search: search results message")
     public void searchFieldNumberOfSearchResultsTest(String query, String resultNumber) {
-        homePage.openSearchPage();
+        homePageTab.getYourProductSearchField().click();
         searchPage.getSearchProductTextField().sendKeys(query);
         waitManager.waitElementToBeVisible(20, searchPage.getSearchResultsQuantity());
         String result = searchPage.getSearchResultsQuantity().getText();
@@ -193,7 +176,7 @@ public class SmokeTabletTest extends BaseTest {
 
     @Test(testName = "TC BILTAPPTST-278_3", enabled = true, priority = 14, description = "Search: search products")
     public void searchFieldCancelNumberOfResultsTest() {
-        homePage.openSearchPage();
+        homePageTab.getYourProductSearchField().click();
         boolean result = true;
         try {
             searchPage.getSearchResultsQuantity().getText();
@@ -207,7 +190,7 @@ public class SmokeTabletTest extends BaseTest {
     @Test(testName = "TC BILTAPPTST-279_1", enabled = true, priority = 15, dataProvider = "Values for TC BILTAPPTST-279",
             description = "Search: search product")
     public void searchProductsAutoSubmitTest(String query) {
-        homePage.openSearchPage();
+        homePageTab.getYourProductSearchField().click();
         searchPage.getSearchProductTextField().sendKeys(query);
         DriverManager.getDriver().hideKeyboard();
         waitManager.waitElementToBeVisible(20, searchPage.getSearchResultsQuantity());
@@ -224,8 +207,8 @@ public class SmokeTabletTest extends BaseTest {
 
     @Test(testName = "Precondition to TC BILTAPPTST-279_2", enabled = true, priority = 16)
     public void openSearchPage() {
-        waitManager.waitElementToBeClickable(10, homePage.getSettingsButton());
-        homePage.openSearchPage();
+        waitManager.waitElementToBeClickable(10, homePageTab.getSettingsButton());
+        homePageTab.getYourProductSearchField().click();
     }
 
     @Test(testName = "TC BILTAPPTST-279_2", enabled = true, priority = 17, dataProvider = "Values for TC BILTAPPTST-279",
@@ -259,8 +242,8 @@ public class SmokeTabletTest extends BaseTest {
     @Test(testName = "TC BILTAPPTST-280_1,2,3,4", enabled = true, priority = 18, description = "Product: Details page")
     public void openDetailsPageOfAnyProduct() throws InterruptedException {
         searchPage.getCancelSearchButton().click();
-        waitManager.waitElementToBeClickable(10, homePage.getSettingsButton());
-        homePage.openSearchPage();
+        waitManager.waitElementToBeClickable(10, homePageTab.getSettingsButton());
+        homePageTab.getYourProductSearchField().click();
         searchPage.getViewAllProductButton().click();
         waitManager.waitElementToBeVisible(20, searchPage.getSearchResultsQuantity());
         listOfAllProducts = new ArrayList<>(searchPage.getListOfProductContainers());
@@ -475,8 +458,8 @@ public class SmokeTabletTest extends BaseTest {
         modelOverviewPage.getBackButton().click();
         waitManager.waitElementToBeClickable(10, searchPage.getCancelSearchButton());
         searchPage.getCancelSearchButton().click();
-        waitManager.waitElementToBeClickable(10, homePage.getSettingsButton());
-        homePage.getMyStuffButton().click();
+        waitManager.waitElementToBeClickable(10, homePageTab.getSettingsButton());
+        homePageTab.getMyStuffButton().click();
         DriverManager.getDriver().scrollTo(productNameInDetailsPage);
         DriverManager.getDriver().tap(1, myStuffPage.getItemName(), 1);
         waitManager.waitElementToBeClickable(20, modelOverviewPage.getStartAssemblyButton());
@@ -507,7 +490,7 @@ public class SmokeTabletTest extends BaseTest {
         modelPlayerPage.getCloseViewerButton().click();
         try {
             waitManager.waitElementToBeClickable(20, modelOverviewPage.getStartAssemblyButton());
-        }catch (NoSuchElementException ex){
+        } catch (NoSuchElementException ex) {
             modelPlayerPage.getCloseViewerButton().click();
         }
     }
@@ -515,8 +498,8 @@ public class SmokeTabletTest extends BaseTest {
     @Test(testName = "TC BILTAPPTST-297_1", enabled = true, priority = 37, description = "[Android]Product:My Stuff remove model")
     public void myStuffRemoveTest() {
         modelOverviewPage.getBackButton().click();
-        waitManager.waitElementToBeClickable(10, homePage.getSettingsButton());
-        homePage.getMyStuffButton().click();
+        waitManager.waitElementToBeClickable(10, homePageTab.getSettingsButton());
+        homePageTab.getMyStuffButton().click();
         myStuffPage.getEditButton().click();
         myStuffPage.getRemoveItemButton().click();
     }
@@ -544,7 +527,7 @@ public class SmokeTabletTest extends BaseTest {
     @Test(testName = "TC BILTAPPTST-298_1,2,3", enabled = true, priority = 40, description = "Sign In: Sign In button",
             dataProvider = "Values for TC BILTAPPTST-298_1,2")
     public void signInButtonDisabledTest(String email, String password) {
-        homePage.getSignInButton().click();
+        homePageTab.getSignInButton().click();
         signInMenu.getEmailField().click();
         signInMenu.getEmailField().clear();
         signInMenu.getEmailField().sendKeys(email);
@@ -553,7 +536,7 @@ public class SmokeTabletTest extends BaseTest {
         DriverManager.getDriver().navigate().back();
         boolean result = signInMenu.getSignInButton().isEnabled();
         signInMenu.getMenuCloseButton().click();
-        waitManager.waitElementToBeClickable(10, homePage.getSettingsButton());
+        waitManager.waitElementToBeClickable(10, homePageTab.getSettingsButton());
         Assert.assertEquals(result, false);
     }
 
@@ -573,7 +556,7 @@ public class SmokeTabletTest extends BaseTest {
 
     @Test(testName = "TC BILTAPPTST-298_4", enabled = true, priority = 41, description = "Sign In: Email")
     public void signInEmailTest() {
-        homePage.getSignInButton().click();
+        homePageTab.getSignInButton().click();
         signInMenu.getEmailField().click();
         signInMenu.getEmailField().clear();
         signInMenu.getEmailField().sendKeys("x@x.xx");
@@ -588,7 +571,7 @@ public class SmokeTabletTest extends BaseTest {
 
     @Test(testName = "TC BILTAPPTST-299_1,2,3", enabled = true, priority = 42, description = "Sign In: Forgot Password UI")
     public void forgotYourPasswordTitleTest() {
-        homePage.getSignInButton().click();
+        homePageTab.getSignInButton().click();
         signInMenu.getForgotPasswordButton().click();
         String result = widgetView.getTextViewTitle().getText();
         forgotPasswordMenu.getLeftMenuCloseButton().click();
@@ -599,7 +582,7 @@ public class SmokeTabletTest extends BaseTest {
 
     @Test(testName = "TC BILTAPPTST-299_3", enabled = true, priority = 43, description = "Sign In: Forgot Password UI")
     public void forgotYourPasswordMessageTest() {
-        homePage.getSignInButton().click();
+        homePageTab.getSignInButton().click();
         signInMenu.getForgotPasswordButton().click();
         boolean result = false;
         List<MobileElement> listOfTextViews = new ArrayList<>(widgetView.getListOfTextViews());
@@ -617,7 +600,7 @@ public class SmokeTabletTest extends BaseTest {
 
     @Test(testName = "TC BILTAPPTST-300_1", enabled = true, priority = 44, description = "Sign In: Forgot Password Submit")
     public void forgotYourPasswordSubmitDisabledTest() {
-        homePage.getSignInButton().click();
+        homePageTab.getSignInButton().click();
         signInMenu.getForgotPasswordButton().click();
         boolean result = forgotPasswordMenu.getForgotPassSubmitButton().isEnabled();
         Assert.assertEquals(result, false);
@@ -639,11 +622,11 @@ public class SmokeTabletTest extends BaseTest {
     @Test(testName = "TC BILTAPPTST-301_1,2,3", enabled = true, priority = 46, description = "Sign In: Forgot Password Submit")
     public void facebookSignInTest() {
         FacebookView facebookView = new FacebookView();
-        homePage.getSignInButton().click();
+        homePageTab.getSignInButton().click();
         signInMenu.getFacebookLogin().click();
         waitManager.waitElementToBeClickable(30, facebookView.getLogInFacebookButton());
         facebookView.getFacebookCloseViewButton().click();
-        homePage.getSignInButton().click();
+        homePageTab.getSignInButton().click();
         signInMenu.getFacebookLogin().click();
         waitManager.waitElementToBeClickable(30, facebookView.getLogInFacebookButton());
         DriverManager.getDriver().navigate().back();
@@ -651,7 +634,7 @@ public class SmokeTabletTest extends BaseTest {
 
     @Test(testName = "TC BILTAPPTST-302_1", enabled = true, priority = 47, description = "Sign In: Sign Up")
     public void signUpTitleTest() {
-        homePage.getSignInButton().click();
+        homePageTab.getSignInButton().click();
         signInMenu.getSignUpButton().click();
         String result = signUpMenu.getMenuTitle().getText();
         Assert.assertEquals(result, "Create Account");
@@ -667,7 +650,7 @@ public class SmokeTabletTest extends BaseTest {
 
     @Test(testName = "TC BILTAPPTST-303_1", enabled = true, priority = 49, description = "Sign In: Sign Up")
     public void signUpDisabledTest() {
-        homePage.getSignInButton().click();
+        homePageTab.getSignInButton().click();
         signInMenu.getSignUpButton().click();
         boolean result = signUpMenu.getSignUpCreateAccountButton().isEnabled();
         Assert.assertEquals(result, false);

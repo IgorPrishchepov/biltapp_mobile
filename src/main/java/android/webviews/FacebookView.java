@@ -1,12 +1,13 @@
 package android.webviews;
 
+import android.global_pages.AbstractPage;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
 /**
  * Created by Ihar_Pryshchepau on 4/6/2016.
  */
-public class FacebookView extends AbstactPage {
+public class FacebookView extends AbstractPage {
 
     @AndroidFindBy(className = "android.widget.Button")
     private MobileElement logInFacebookButton;

@@ -13,10 +13,10 @@ public class SmokeSmartTest extends BaseTest {
 
     @Test(testName = "TC BILTAPPTST-268", enabled = true, priority = 0, description = "Introduction page swipe")
     public void swipeIntroductionPageTest() {
-        waitManager.waitElementToBeClickable(15, introductionPage.getSkipButton());
+        waitManager.waitElementToBeClickable(15, introductionPageSmart.getSkipButton());
         int result = 0;
         for (int i = 0; i < 3; i++) {
-            String title = introductionPage.getSkipButton().getText();
+            String title = introductionPageSmart.getSkipButton().getText();
             if (title.equals(SKIP_BUTTON_NAME)) {
                 result = result + 1;
             }
@@ -27,9 +27,9 @@ public class SmokeSmartTest extends BaseTest {
 
     @Test(testName = "TC BILTAPPTST-268", enabled = true, priority = 1, description = "Introduction page swipe")
     public void swipeIntroductionLastPageTest() {
-        waitManager.waitElementToBeClickable(10, introductionPage.getLetsGetStartedButton());
-        String result = introductionPage.getLetsGetStartedButton().getText();
-        introductionPage.getLetsGetStartedButton().click();
+        waitManager.waitElementToBeClickable(10, introductionPageSmart.getLetsGetStartedButton());
+        String result = introductionPageSmart.getLetsGetStartedButton().getText();
+        introductionPageSmart.getLetsGetStartedButton().click();
         Assert.assertEquals(result, LETS_START_BUTTON_NAME);
     }
 

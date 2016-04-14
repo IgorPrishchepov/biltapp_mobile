@@ -9,7 +9,7 @@ public class SandBoxTest extends BaseTest{
 
     @Test(priority = 0)
     public void skipIntro(){
-        waitManager.waitElementToBeClickable(15, introductionPage.getSkipButton());
-        introductionPage.getSkipButton().click();
+        waitManager.waitElementToBeClickable(15, introductionPageSmart.getSkipButton());
+        introductionPageSmart.getSkipButton().click();
     }
 }

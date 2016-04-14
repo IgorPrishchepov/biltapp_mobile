@@ -1,5 +1,6 @@
 package android.tablets.tests;
 
+import android.tablets.pop_up_menus.LabsModeMenu;
 import io.appium.java_client.MobileElement;
 import org.testng.annotations.Test;
 
@@ -17,7 +18,14 @@ public class SandBoxTest extends BaseTest {
     public void skipIntro() {
         waitManager.waitElementToBeClickable(15, introductionPage.getSkipButton());
         introductionPage.getSkipButton().click();
-        waitManager.waitElementToBeClickable(10, homePage.getSettingsButton());
+        waitManager.waitElementToBeClickable(10, homePageTab.getSettingsButton());
+    }
+
+    @Test(priority = 1, enabled = true)
+    public void settingsTest() {
+        settingsManager.openLabMode();
+        LabsModeMenu labsModeMenu = new LabsModeMenu();
+        labsModeMenu.getLabsModeYesButton().click();
     }
 
 
@@ -31,7 +39,7 @@ public class SandBoxTest extends BaseTest {
     /*
     @Test(testName = "TC BILTAPPTST-278", enabled = true, priority = 12, description = "Search: search products")
     public void searchFieldProductNotFoundQueryMessagesTest() throws InterruptedException {
-        homePage.openSearchPage();
+        homePageTab.openSearchPage();
         //searchPage.getSearchProductTextField().sendKeys("test");
         DriverManager.getDriver().hideKeyboard();
         Thread.sleep(3000);
@@ -67,15 +75,15 @@ public class SandBoxTest extends BaseTest {
 
     @Test
     public void swipeIntroduction() throws InterruptedException {
-        waitManager.waitElementToBeClickable(5, introductionPage.getSkipButton());
-        introductionPage.getSkipButton().click();
+        waitManager.waitElementToBeClickable(5, introductionPageSmart.getSkipButton());
+        introductionPageSmart.getSkipButton().click();
         settingsManager.openSettings();
         Thread.sleep(5000);
     }
 
     @Test(testName = "TC BILTAPPTST-278", enabled = true, priority = 12, description = "Search: search products")
     public void searchFieldProductNotFoundQueryMessagesTest() throws InterruptedException {
-        homePage.openSearchPage();
+        homePageTab.openSearchPage();
         searchPage.getSearchProductTextField().sendKeys("test");
         DriverManager.getDriver().hideKeyboard();
         Thread.sleep(3000);
@@ -103,7 +111,7 @@ public class SandBoxTest extends BaseTest {
     @Test(testName = "TC BILTAPPTST-278", enabled = true, priority = 14, description = "Search: search products")
     public void searchFieldNoMessagesAfterCancelTest() throws InterruptedException {
         searchPage.getCancelSearchButton().click();
-        homePage.openSearchPage();
+        homePageTab.openSearchPage();
         DriverManager.getDriver().hideKeyboard();
         Thread.sleep(3000);
         int result = 0;
@@ -125,7 +133,7 @@ public class SandBoxTest extends BaseTest {
     public void openDetailsPageOfAnyProduct() throws InterruptedException {
 
         //searchPage.getCancelSearchButton().click();
-        homePage.openSearchPage();
+        homePageTab.openSearchPage();
         searchPage.getViewAllProductButton().click();
         waitManager.waitElementToBeVisible(20, searchPage.getSearchResultsQuantity());
         //DriverManager.getDriver().scrollTo("Weber Genesis S-330");

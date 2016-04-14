@@ -1,5 +1,6 @@
 package android.webviews;
 
+import android.global_pages.AbstractPage;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AndroidFindBys;
@@ -9,7 +10,7 @@ import java.util.List;
 /**
  * Created by Ihar_Pryshchepau on 3/22/2016.
  */
-public class WidgetView extends AbstactPage {
+public class WidgetView extends AbstractPage {
 
     @AndroidFindBy(id = "com.bilt.mobile:id/title")
     private MobileElement textViewTitle;

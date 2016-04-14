@@ -1,50 +1,39 @@
 package android.tablets.pages;
 
-import android.global_pages.AbstractPage;
+import android.global_pages.HomePage;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
 /**
  * Created by Ihar_Pryshchepau on 3/22/2016.
  */
-public class HomePageTab extends AbstractPage {
+public class HomePageTab extends HomePage {
 
-     @AndroidFindBy(id = "com.bilt.mobile:id/pattern")
-    private MobileElement yourProductSearch;
-
-    public MobileElement getYourProductSearch() {
-        return yourProductSearch;
-    }
+    @AndroidFindBy(id = "com.bilt.mobile:id/existingAccount")
+    private MobileElement signInButton;
 
     @AndroidFindBy(id = "com.bilt.mobile:id/myStuffShow")
     private MobileElement myStuffButton;
+
+    @AndroidFindBy(id = "com.bilt.mobile:id/logoSearch")
+    private MobileElement logoImage;
+
+    @AndroidFindBy(id = "com.bilt.mobile:id/myStuffLbl")
+    private MobileElement myStuffButtonName;
 
     public MobileElement getMyStuffButton() {
         return myStuffButton;
     }
 
-
-    @AndroidFindBy(id = "com.bilt.mobile:id/existingAccount")
-    private MobileElement signInButton;
-
     public MobileElement getSignInButton() {
         return signInButton;
     }
-
-    @AndroidFindBy(id = "com.bilt.mobile:id/logoSearch")
-    private MobileElement logoImage;
 
     public MobileElement getLogoImage() {
         return logoImage;
     }
 
-    public void openSearchPage() {
-        yourProductSearch.click();
+    public MobileElement getMyStuffButtonName() {
+        return myStuffButtonName;
     }
-
-    public void openMyStuff() {
-        myStuffButton.click();
-    }
-
-
 }
