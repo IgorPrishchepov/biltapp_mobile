@@ -1,5 +1,6 @@
 package android.tablets.pages;
 
+import android.global_pages.AbstractPage;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AndroidFindBys;
@@ -10,7 +11,7 @@ import java.util.List;
 /**
  * Created by Ihar_Pryshchepau on 3/23/2016.
  */
-public class SearchPage extends AbstactPage {
+public class SearchPage extends AbstractPage {
 
     @AndroidFindBy(className = "android.widget.EditText")
     private MobileElement searchProductTextField;

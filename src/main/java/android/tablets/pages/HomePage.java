@@ -1,12 +1,13 @@
 package android.tablets.pages;
 
+import android.global_pages.AbstractPage;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
 /**
  * Created by Ihar_Pryshchepau on 3/22/2016.
  */
-public class HomePage extends AbstactPage {
+public class HomePage extends AbstractPage {
 
     @AndroidFindBy(id = "com.bilt.mobile:id/settingsButton")
     private MobileElement settingsButton;
@@ -21,12 +22,6 @@ public class HomePage extends AbstactPage {
     public MobileElement getYourProductSearch() {
         return yourProductSearch;
     }
-
-
-
-
-
-
 
     @AndroidFindBy(id = "com.bilt.mobile:id/myStuffShow")
     private MobileElement myStuffButton;

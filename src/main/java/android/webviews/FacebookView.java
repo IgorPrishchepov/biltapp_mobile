@@ -1,6 +1,5 @@
 package android.webviews;
 
-import android.tablets.pages.AbstactPage;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 

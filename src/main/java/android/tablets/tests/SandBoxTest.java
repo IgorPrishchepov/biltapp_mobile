@@ -1,6 +1,5 @@
 package android.tablets.tests;
 
-import android.exceptions.IncorrectElementUINameException;
 import io.appium.java_client.MobileElement;
 import org.testng.annotations.Test;
 
@@ -15,7 +14,7 @@ public class SandBoxTest extends BaseTest {
     private List<MobileElement> listOfAllProducts = null;
 
     @Test(priority = 0, enabled = true)
-    public void skipIntro() throws IncorrectElementUINameException {
+    public void skipIntro() {
         waitManager.waitElementToBeClickable(15, introductionPage.getSkipButton());
         introductionPage.getSkipButton().click();
         waitManager.waitElementToBeClickable(10, homePage.getSettingsButton());

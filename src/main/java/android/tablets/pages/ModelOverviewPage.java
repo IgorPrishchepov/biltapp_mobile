@@ -1,5 +1,6 @@
 package android.tablets.pages;
 
+import android.global_pages.AbstractPage;
 import android.tablets.pop_up_menus.RegistrationMenu;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -7,7 +8,7 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 /**
  * Created by Ihar_Pryshchepau on 3/25/2016.
  */
-public class ModelOverviewPage extends AbstactPage {
+public class ModelOverviewPage extends AbstractPage {
 
     @AndroidFindBy(id = "com.bilt.mobile:id/getAssembly")
     private MobileElement getInstructionsButton;
