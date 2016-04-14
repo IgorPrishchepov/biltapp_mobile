@@ -7,7 +7,7 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 /**
  * Created by Ihar_Pryshchepau on 4/14/2016.
  */
-public class SettingsPage extends AbstractPage {
+public class SettingsPageSmart extends AbstractPage {
 
     @AndroidFindBy(id = "com.bilt.mobile:id/settingsButton")
     private MobileElement preSettingsMenuButton;

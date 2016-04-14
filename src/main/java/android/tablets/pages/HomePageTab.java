@@ -7,16 +7,9 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 /**
  * Created by Ihar_Pryshchepau on 3/22/2016.
  */
-public class HomePage extends AbstractPage {
+public class HomePageTab extends AbstractPage {
 
-    @AndroidFindBy(id = "com.bilt.mobile:id/settingsButton")
-    private MobileElement settingsButton;
-
-    public MobileElement getSettingsButton() {
-        return settingsButton;
-    }
-
-    @AndroidFindBy(id = "com.bilt.mobile:id/pattern")
+     @AndroidFindBy(id = "com.bilt.mobile:id/pattern")
     private MobileElement yourProductSearch;
 
     public MobileElement getYourProductSearch() {
