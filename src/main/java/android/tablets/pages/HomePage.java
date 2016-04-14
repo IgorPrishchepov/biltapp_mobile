@@ -8,12 +8,25 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
  */
 public class HomePage extends AbstactPage {
 
+    @AndroidFindBy(id = "com.bilt.mobile:id/settingsButton")
+    private MobileElement settingsButton;
+
+    public MobileElement getSettingsButton() {
+        return settingsButton;
+    }
+
     @AndroidFindBy(id = "com.bilt.mobile:id/pattern")
     private MobileElement yourProductSearch;
 
     public MobileElement getYourProductSearch() {
         return yourProductSearch;
     }
+
+
+
+
+
+
 
     @AndroidFindBy(id = "com.bilt.mobile:id/myStuffShow")
     private MobileElement myStuffButton;
@@ -22,12 +35,6 @@ public class HomePage extends AbstactPage {
         return myStuffButton;
     }
 
-    @AndroidFindBy(id = "com.bilt.mobile:id/settingsButton")
-    private MobileElement settingsButton;
-
-    public MobileElement getSettingsButton() {
-        return settingsButton;
-    }
 
     @AndroidFindBy(id = "com.bilt.mobile:id/existingAccount")
     private MobileElement signInButton;
@@ -50,7 +57,6 @@ public class HomePage extends AbstactPage {
     public void openMyStuff() {
         myStuffButton.click();
     }
-
 
 
 }

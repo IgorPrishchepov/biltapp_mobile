@@ -15,15 +15,6 @@ public class HomePage extends AbstractPage {
         return settingsButton;
     }
 
-    @AndroidFindBy(id = "com.bilt.mobile:id/signIn")
-    private MobileElement signInButton;
-
-    public MobileElement getSignInButton() {
-        return signInButton;
-    }
-
-    public final String SIGN_IN_BUTTON_NAME = "Sign In";
-
     @AndroidFindBy(id = "com.bilt.mobile:id/pattern")
     private MobileElement yourProductSearch;
 
@@ -31,7 +22,12 @@ public class HomePage extends AbstractPage {
         return yourProductSearch;
     }
 
-    public final String SEARCH_FIELD_NAME = "Your Product";
+    @AndroidFindBy(id = "com.bilt.mobile:id/signIn")
+    private MobileElement signInButton;
+
+    public MobileElement getSignInButton() {
+        return signInButton;
+    }
 
 
 }

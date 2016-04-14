@@ -3,6 +3,9 @@ package android.smartphones.tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import static android.smartphones.titles_and_messages.Buttons.LETS_START_BUTTON_NAME;
+import static android.smartphones.titles_and_messages.Buttons.SKIP_BUTTON_NAME;
+
 /**
  * Created by Ihar_Pryshchepau on 4/11/2016.
  */
@@ -14,7 +17,7 @@ public class SmokeSmartTest extends BaseTest {
         int result = 0;
         for (int i = 0; i < 3; i++) {
             String title = introductionPage.getSkipButton().getText();
-            if (title.equals(introductionPage.SKIP_BUTTON_NAME)) {
+            if (title.equals(SKIP_BUTTON_NAME)) {
                 result = result + 1;
             }
             userActionsManager.swipeToLeft();
@@ -27,7 +30,7 @@ public class SmokeSmartTest extends BaseTest {
         waitManager.waitElementToBeClickable(10, introductionPage.getLetsGetStartedButton());
         String result = introductionPage.getLetsGetStartedButton().getText();
         introductionPage.getLetsGetStartedButton().click();
-        Assert.assertEquals(result, introductionPage.LETS_START_BUTTON_NAME);
+        Assert.assertEquals(result, LETS_START_BUTTON_NAME);
     }
 
 
