@@ -23,7 +23,7 @@ public class DriverManager {
         caps.setCapability(PLATFORM_NAME, "Android");
         caps.setCapability(PLATFORM_VERSION, "5.0");
         caps.setCapability(DEVICE_NAME, "Device_1");
-        caps.setCapability(APP, "C:\\Users\\Ihar_Pryshchepau\\Downloads\\BILT\\preprod\\BILT_80p.apk");
+        caps.setCapability(APP, "C:\\Users\\Ihar_Pryshchepau\\Downloads\\BILT\\BILT_84.apk");
         AppiumDriver driver = new AndroidDriver(new URL(URI_SCHEME + "127.0.0.1:4723" + WD_SERVER_ROOT), caps);
         driverPool.set(driver);
         driverPool.get().manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);

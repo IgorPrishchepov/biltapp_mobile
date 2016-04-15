@@ -17,6 +17,12 @@ public class LabsModeMenu extends BaseMenu {
     @AndroidFindBy(id = "android:id/button1")
     private MobileElement labsModeYesButton;
 
+    @AndroidFindBy(id = "com.bilt.mobile:id/loggingCheckbox")
+    private MobileElement loggingCheckBox;
+
+    @AndroidFindBy(id = "com.bilt.mobile:id/analyticsCheckbox")
+    private MobileElement analyticsCheckBox;
+
     public MobileElement getLabsModeAgreeMenuMessage() {
         return labsModeAgreeMenuMessage;
     }
@@ -27,5 +33,13 @@ public class LabsModeMenu extends BaseMenu {
 
     public MobileElement getLabsModeYesButton() {
         return labsModeYesButton;
+    }
+
+    public MobileElement getLoggingCheckBox() {
+        return loggingCheckBox;
+    }
+
+    public MobileElement getAnalyticsCheckBox() {
+        return analyticsCheckBox;
     }
 }

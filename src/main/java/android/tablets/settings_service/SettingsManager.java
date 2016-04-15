@@ -9,7 +9,7 @@ import android.services.WaitManager;
  */
 public class SettingsManager {
 
-    public void openMenuItem(int fingers, int x, int y, int duration) throws InterruptedException {
+    public void openMenuItem(int fingers, int x, int y, int duration) {
         DriverManager.getDriver().tap(fingers, x, y, duration);
     }
 
