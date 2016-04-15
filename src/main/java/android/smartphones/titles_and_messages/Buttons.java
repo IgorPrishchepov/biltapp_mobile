@@ -17,7 +17,8 @@ public interface Buttons {
     String PRIVACY_STATEMENT_SETINGS_BUTTON = "Privacy Statement";
     String SUGGESTIONS_BOX_SETINGS_BUTTON = "Suggestions Box";
     String VERSION_STATUS_SETINGS_BUTTON = "App Version";
-    String FACEBOOK_SIGNIN_SETTING_BUTTON = "Sign In with Facebook";
+    String FACEBOOK_SIGNIN_BUTTON = "Sign In with Facebook";
+    String FACEBOOK_SIGNUP_BUTTON = "Sign up with Facebook";
     String LABS_MODE_NO_BUTTON = "NO";
     String LABS_MODE_YES_BUTTON = "YES";
 

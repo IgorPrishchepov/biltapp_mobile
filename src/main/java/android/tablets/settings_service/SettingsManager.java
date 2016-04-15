@@ -2,7 +2,7 @@ package android.tablets.settings_service;
 
 import android.DriverManager;
 import android.tablets.pages.HomePageTab;
-import android.services.WaitManager;
+import android.global_services.WaitManager;
 
 /**
  * Created by Ihar_Pryshchepau on 3/22/2016.

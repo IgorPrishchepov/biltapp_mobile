@@ -40,21 +40,21 @@ public class SandBoxTest extends BaseTest {
     @Test(testName = "TC BILTAPPTST-278", enabled = true, priority = 12, description = "Search: search products")
     public void searchFieldProductNotFoundQueryMessagesTest() throws InterruptedException {
         homePageTab.openSearchPage();
-        //searchPage.getSearchProductTextField().sendKeys("test");
+        //searchPageTab.getSearchProductTextField().sendKeys("test");
         DriverManager.getDriver().hideKeyboard();
         Thread.sleep(3000);
         int result = 0;
-        List<WebElement> messages = searchPage.getSearchResultsTextViews();
+        List<WebElement> messages = searchPageTab.getSearchResultsTextViews();
         for (WebElement element : messages) {
-            if (element.getText().equals(searchPage.OOPS_MESSAGE)) {
+            if (element.getText().equals(searchPageTab.OOPS_MESSAGE)) {
                 System.out.println();
                 result = result + 1;
             }
-            if (element.getText().equals(searchPage.PLEASE_CHECK_MESSAGE)) {
+            if (element.getText().equals(searchPageTab.PLEASE_CHECK_MESSAGE)) {
                 System.out.println(element.isDisplayed());
                 result = result + 1;
             }
-            if (element.getText().equals(searchPage.VIEW_ALL_PRODUCTS_BUTTON_NAME)) {
+            if (element.getText().equals(searchPageTab.VIEW_ALL_PRODUCTS_BUTTON_NAME)) {
                 System.out.println(element.isDisplayed());
                 result = result + 1;
             }
@@ -84,17 +84,17 @@ public class SandBoxTest extends BaseTest {
     @Test(testName = "TC BILTAPPTST-278", enabled = true, priority = 12, description = "Search: search products")
     public void searchFieldProductNotFoundQueryMessagesTest() throws InterruptedException {
         homePageTab.openSearchPage();
-        searchPage.getSearchProductTextField().sendKeys("test");
+        searchPageTab.getSearchProductTextField().sendKeys("test");
         DriverManager.getDriver().hideKeyboard();
         Thread.sleep(3000);
         int result = 0;
-        List<WebElement> messages = searchPage.getSearchResultsTextViews();
+        List<WebElement> messages = searchPageTab.getSearchResultsTextViews();
         for (WebElement element : messages) {
-            if (element.getText().equals(searchPage.OOPS_MESSAGE)) {
+            if (element.getText().equals(searchPageTab.OOPS_MESSAGE)) {
                 result = result + 1;
-            } else if (element.getText().equals(searchPage.PLEASE_CHECK_MESSAGE)) {
+            } else if (element.getText().equals(searchPageTab.PLEASE_CHECK_MESSAGE)) {
                 result = result + 1;
-            } else if (element.getText().equals(searchPage.VIEW_ALL_PRODUCTS_BUTTON_NAME)) {
+            } else if (element.getText().equals(searchPageTab.VIEW_ALL_PRODUCTS_BUTTON_NAME)) {
                 result = result + 1;
             }
         }
@@ -103,26 +103,26 @@ public class SandBoxTest extends BaseTest {
 
     @Test(testName = "TC BILTAPPTST-278", enabled = true, priority = 13, description = "Search: search products")
     public void searchFieldProductNotFoundQueryViewAllButtonTest() {
-        waitManager.waitElementToBeClickable(10, searchPage.getSearchResultsViewAllButton());
-        String result = searchPage.getSearchResultsViewAllButton().getText();
-        Assert.assertEquals(result, searchPage.VIEW_ALL_PRODUCTS_BUTTON_NAME);
+        waitManager.waitElementToBeClickable(10, searchPageTab.getSearchResultsViewAllButton());
+        String result = searchPageTab.getSearchResultsViewAllButton().getText();
+        Assert.assertEquals(result, searchPageTab.VIEW_ALL_PRODUCTS_BUTTON_NAME);
     }
 /*
     @Test(testName = "TC BILTAPPTST-278", enabled = true, priority = 14, description = "Search: search products")
     public void searchFieldNoMessagesAfterCancelTest() throws InterruptedException {
-        searchPage.getCancelSearchButton().click();
+        searchPageTab.getCancelSearchButton().click();
         homePageTab.openSearchPage();
         DriverManager.getDriver().hideKeyboard();
         Thread.sleep(3000);
         int result = 0;
-        List<WebElement> messages = searchPage.getSearchResultsTextViews();
+        List<WebElement> messages = searchPageTab.getSearchResultsTextViews();
         for (WebElement element : messages) {
-            if (element.getText().equals(searchPage.OOPS_MESSAGE)) {
+            if (element.getText().equals(searchPageTab.OOPS_MESSAGE)) {
                 System.out.println(element.getText());
                 result = result + 1;
-            } else if (element.getText().equals(searchPage.PLEASE_CHECK_MESSAGE) & element.isDisplayed()) {
+            } else if (element.getText().equals(searchPageTab.PLEASE_CHECK_MESSAGE) & element.isDisplayed()) {
                 result = result + 1;
-            } else if (element.getText().equals(searchPage.VIEW_ALL_PRODUCTS_BUTTON_NAME) & element.isDisplayed()) {
+            } else if (element.getText().equals(searchPageTab.VIEW_ALL_PRODUCTS_BUTTON_NAME) & element.isDisplayed()) {
                 result = result + 1;
             }
         }
@@ -132,18 +132,18 @@ public class SandBoxTest extends BaseTest {
  @Test(testName = "TC BILTAPPTST-280_1", enabled = true, priority = 18, description = "Product: Details page")
     public void openDetailsPageOfAnyProduct() throws InterruptedException {
 
-        //searchPage.getCancelSearchButton().click();
+        //searchPageTab.getCancelSearchButton().click();
         homePageTab.openSearchPage();
-        searchPage.getViewAllProductButton().click();
-        waitManager.waitElementToBeVisible(20, searchPage.getSearchResultsQuantity());
+        searchPageTab.getViewAllProductButton().click();
+        waitManager.waitElementToBeVisible(20, searchPageTab.getSearchResultsQuantity());
         //DriverManager.getDriver().scrollTo("Weber Genesis S-330");
 
-        List<MobileElement> listOfAllProductNames = searchPage.getListOfProductNames();
+        List<MobileElement> listOfAllProductNames = searchPageTab.getListOfProductNames();
         System.out.println(listOfAllProductNames.size());
         Random random = new Random();
         int elementIndex = random.nextInt(listOfAllProductNames.size());
         String expectedName = listOfAllProductNames.get(elementIndex).getText();
-        List<MobileElement> listOfAllProducts = searchPage.getListOfProductContainers();
+        List<MobileElement> listOfAllProducts = searchPageTab.getListOfProductContainers();
         System.out.println(listOfAllProducts.size());
     /*    listOfAllProducts.get(elementIndex).click();
         waitManager.waitElementToBeClickable(20, modelOverviewPage.getGetInstructionsButton());

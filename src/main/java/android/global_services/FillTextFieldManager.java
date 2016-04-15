@@ -1,4 +1,4 @@
-package android.services;
+package android.global_services;
 
 import android.DriverManager;
 import io.appium.java_client.MobileElement;

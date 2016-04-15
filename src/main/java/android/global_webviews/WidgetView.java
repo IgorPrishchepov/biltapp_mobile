@@ -1,4 +1,4 @@
-package android.webviews;
+package android.global_webviews;
 
 import android.global_pages.AbstractPage;
 import io.appium.java_client.MobileElement;

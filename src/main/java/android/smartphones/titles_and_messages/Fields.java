@@ -6,4 +6,6 @@ package android.smartphones.titles_and_messages;
 public interface Fields {
 
     String SEARCH_FIELD_NAME = "Your Product";
+    String EMAIL_FIELD_NAME = "Email Address";
+    String YOUR_PRODUCT_FIELD_NAME = "Your Product";
 }

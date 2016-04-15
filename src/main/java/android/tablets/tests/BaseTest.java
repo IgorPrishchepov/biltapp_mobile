@@ -1,16 +1,16 @@
 package android.tablets.tests;
 
 import android.global_pages.IntroductionPage;
-import android.services.FillTextFieldManager;
-import android.services.UserActionsManager;
-import android.services.WaitManager;
+import android.global_services.FillTextFieldManager;
+import android.global_services.UserActionsManager;
+import android.global_services.WaitManager;
 import android.tablets.pages.*;
-import android.tablets.pop_up_menus.ForgotPasswordMenu;
+import android.global_menus.ForgotPasswordMenu;
 import android.tablets.pop_up_menus.RegistrationMenu;
-import android.tablets.pop_up_menus.SignInMenu;
-import android.tablets.pop_up_menus.SignUpMenu;
+import android.global_menus.SignInMenu;
+import android.global_menus.SignUpMenu;
 import android.tablets.settings_service.SettingsManager;
-import android.webviews.WidgetView;
+import android.global_webviews.WidgetView;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
@@ -27,10 +27,10 @@ public class BaseTest {
     protected WaitManager waitManager;
     protected UserActionsManager userActionsManager;
     protected SettingsManager settingsManager;
-    protected MyStuffPage myStuffPage;
+    protected MyStuffPageTab myStuffPageTab;
     protected WidgetView widgetView;
     protected SignInMenu signInMenu;
-    protected SearchPage searchPage;
+    protected SearchPageTab searchPageTab;
     protected static ModelOverviewPage modelOverviewPage;
     protected static ModelExtrasPage modelExtrasPage;
     protected RegistrationMenu registrationMenu;
@@ -52,10 +52,10 @@ public class BaseTest {
         userActionsManager = new UserActionsManager();
         homePageTab = new HomePageTab();
         settingsManager = new SettingsManager();
-        myStuffPage = new MyStuffPage();
+        myStuffPageTab = new MyStuffPageTab();
         widgetView = new WidgetView();
         signInMenu = new SignInMenu();
-        searchPage = new SearchPage();
+        searchPageTab = new SearchPageTab();
         modelOverviewPage = new ModelOverviewPage();
         modelExtrasPage = new ModelExtrasPage();
         modelPartsListPage = new ModelPartsListPage();

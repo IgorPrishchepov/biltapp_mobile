@@ -1,4 +1,4 @@
-package android.services;
+package android.global_services;
 
 import android.DriverManager;
 import org.openqa.selenium.Dimension;

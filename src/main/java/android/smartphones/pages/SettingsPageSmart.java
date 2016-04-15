@@ -12,47 +12,47 @@ public class SettingsPageSmart extends AbstractPage {
     @AndroidFindBy(id = "com.bilt.mobile:id/settingsButton")
     private MobileElement preSettingsMenuButton;
 
+    @AndroidFindBy(id = "com.bilt.mobile:id/signIn")
+    private MobileElement signInFromSettingsButton;
+
+    @AndroidFindBy(id = "com.bilt.mobile:id/introduction")
+    private MobileElement introductionButton;
+
+    @AndroidFindBy(id = "com.bilt.mobile:id/termsOfUse")
+    private MobileElement termsOfUseButton;
+
+    @AndroidFindBy(id = "com.bilt.mobile:id/privacyPolicy")
+    private MobileElement privacyStatementButton;
+
+    @AndroidFindBy(id = "com.bilt.mobile:id/suggestions")
+    private MobileElement suggestionsBoxButton;
+
+    @AndroidFindBy(id = "com.bilt.mobile:id/versionStatus")
+    private MobileElement versionStatusButton;
+
     public MobileElement getPreSettingsMenuButton() {
         return preSettingsMenuButton;
     }
-
-    @AndroidFindBy(id = "com.bilt.mobile:id/signIn")
-    private MobileElement signInFromSettingsButton;
 
     public MobileElement getSignInFromSettingsButton() {
         return signInFromSettingsButton;
     }
 
-    @AndroidFindBy(id = "com.bilt.mobile:id/introduction")
-    private MobileElement introductionButton;
-
     public MobileElement getIntroductionButton() {
         return introductionButton;
     }
-
-    @AndroidFindBy(id = "com.bilt.mobile:id/termsOfUse")
-    private MobileElement termsOfUseButton;
 
     public MobileElement getTermsOfUseButton() {
         return termsOfUseButton;
     }
 
-    @AndroidFindBy(id = "com.bilt.mobile:id/privacyPolicy")
-    private MobileElement privacyStatementButton;
-
     public MobileElement getPrivacyStatementButton() {
         return privacyStatementButton;
     }
 
-    @AndroidFindBy(id = "com.bilt.mobile:id/suggestions")
-    private MobileElement suggestionsBoxButton;
-
     public MobileElement getSuggestionsBoxButton() {
         return suggestionsBoxButton;
     }
-
-    @AndroidFindBy(id = "com.bilt.mobile:id/versionStatus")
-    private MobileElement versionStatusButton;
 
     public MobileElement getVersionStatusButton() {
         return versionStatusButton;

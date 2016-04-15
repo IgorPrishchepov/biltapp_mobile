@@ -1,7 +1,7 @@
 package android.global_pages;
 
-import android.services.UserActionsManager;
-import android.services.WaitManager;
+import android.global_services.UserActionsManager;
+import android.global_services.WaitManager;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 

@@ -3,7 +3,7 @@ package android.tablets.tests;
 import android.DriverManager;
 import android.tablets.pop_up_menus.AndroidShareViaMenu;
 import android.tablets.pop_up_menus.SuggestionBoxMenu;
-import android.webviews.FacebookView;
+import android.global_webviews.FacebookView;
 import io.appium.java_client.MobileElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -123,9 +123,9 @@ public class SmokeTabletTest extends BaseTest {
     @Test(testName = "TC BILTAPPTST-276", enabled = true, priority = 9, description = "My Stuff section: first open")
     public void myStuffIsEmptyTest() {
         homePageTab.getMyStuffButton().click();
-        String result = myStuffPage.getMyStuffIsEmptyMessageOne().getText();
-        waitManager.waitElementToBeClickable(10, myStuffPage.getMyStuffHideButton());
-        myStuffPage.getMyStuffHideButton().click();
+        String result = myStuffPageTab.getMyStuffIsEmptyMessageOne().getText();
+        waitManager.waitElementToBeClickable(10, myStuffPageTab.getMyStuffHideButton());
+        myStuffPageTab.getMyStuffHideButton().click();
         waitManager.waitElementToBeClickable(10, homePageTab.getSettingsButton());
         Assert.assertEquals(result, "Nothing to see here... yet.");
     }
@@ -133,24 +133,24 @@ public class SmokeTabletTest extends BaseTest {
     @Test(testName = "TC BILTAPPTST-277", enabled = true, priority = 10, description = "Search: search field edit")
     public void searchFieldTitleTest() {
         homePageTab.getYourProductSearchField().click();
-        String result = searchPage.getSearchProductTextField().getText();
+        String result = searchPageTab.getSearchProductTextField().getText();
         Assert.assertEquals(result, "Your Product");
 
     }
 
     @Test(testName = "TC BILTAPPTST-277", enabled = true, priority = 11, description = "Search: search field edit")
     public void searchFieldEditQueryTest() {
-        searchPage.getSearchProductTextField().sendKeys("test");
-        waitManager.waitElementToBeClickable(10, searchPage.getClearQueryButton());
-        searchPage.getClearQueryButton().click();
-        waitManager.waitElementToBeClickable(10, searchPage.getViewAllProductButton());
-        String result = searchPage.getViewAllProductButton().getText();
+        searchPageTab.getSearchProductTextField().sendKeys("test");
+        waitManager.waitElementToBeClickable(10, searchPageTab.getClearQueryButton());
+        searchPageTab.getClearQueryButton().click();
+        waitManager.waitElementToBeClickable(10, searchPageTab.getViewAllProductButton());
+        String result = searchPageTab.getViewAllProductButton().getText();
         Assert.assertEquals(result, "View all available products");
     }
 
     @Test(testName = "TC BILTAPPTST-277", enabled = true, priority = 12, description = "Search: search field edit")
     public void searchFieldCancelTest() {
-        searchPage.getCancelSearchButton().click();
+        searchPageTab.getCancelSearchButton().click();
         waitManager.waitElementToBeClickable(10, homePageTab.getSettingsButton());
     }
 
@@ -158,11 +158,11 @@ public class SmokeTabletTest extends BaseTest {
             description = "Search: search results message")
     public void searchFieldNumberOfSearchResultsTest(String query, String resultNumber) {
         homePageTab.getYourProductSearchField().click();
-        searchPage.getSearchProductTextField().sendKeys(query);
-        waitManager.waitElementToBeVisible(20, searchPage.getSearchResultsQuantity());
-        String result = searchPage.getSearchResultsQuantity().getText();
-        searchPage.getClearQueryButton().click();
-        searchPage.getCancelSearchButton().click();
+        searchPageTab.getSearchProductTextField().sendKeys(query);
+        waitManager.waitElementToBeVisible(20, searchPageTab.getSearchResultsQuantity());
+        String result = searchPageTab.getSearchResultsQuantity().getText();
+        searchPageTab.getClearQueryButton().click();
+        searchPageTab.getCancelSearchButton().click();
         Assert.assertEquals(result, resultNumber);
     }
 
@@ -179,11 +179,11 @@ public class SmokeTabletTest extends BaseTest {
         homePageTab.getYourProductSearchField().click();
         boolean result = true;
         try {
-            searchPage.getSearchResultsQuantity().getText();
+            searchPageTab.getSearchResultsQuantity().getText();
         } catch (NoSuchElementException e) {
             result = false;
         }
-        searchPage.getCancelSearchButton().click();
+        searchPageTab.getCancelSearchButton().click();
         Assert.assertEquals(result, false);
     }
 
@@ -191,17 +191,17 @@ public class SmokeTabletTest extends BaseTest {
             description = "Search: search product")
     public void searchProductsAutoSubmitTest(String query) {
         homePageTab.getYourProductSearchField().click();
-        searchPage.getSearchProductTextField().sendKeys(query);
+        searchPageTab.getSearchProductTextField().sendKeys(query);
         DriverManager.getDriver().hideKeyboard();
-        waitManager.waitElementToBeVisible(20, searchPage.getSearchResultsQuantity());
+        waitManager.waitElementToBeVisible(20, searchPageTab.getSearchResultsQuantity());
         boolean result = false;
-        List<MobileElement> products = searchPage.getListOfProductNames();
+        List<MobileElement> products = searchPageTab.getListOfProductNames();
         for (MobileElement element : products) {
             if (element.getText().contains(query)) {
                 result = true;
             }
         }
-        searchPage.getCancelSearchButton().click();
+        searchPageTab.getCancelSearchButton().click();
         Assert.assertEquals(result, true);
     }
 
@@ -214,17 +214,17 @@ public class SmokeTabletTest extends BaseTest {
     @Test(testName = "TC BILTAPPTST-279_2", enabled = true, priority = 17, dataProvider = "Values for TC BILTAPPTST-279",
             description = "Search: search product")
     public void searchProductsManualSubmitTest(String query) {
-        searchPage.getSearchProductTextField().sendKeys(query);
+        searchPageTab.getSearchProductTextField().sendKeys(query);
         DriverManager.getDriver().hideKeyboard();
-        waitManager.waitElementToBeVisible(20, searchPage.getSearchResultsQuantity());
+        waitManager.waitElementToBeVisible(20, searchPageTab.getSearchResultsQuantity());
         boolean result = false;
-        List<MobileElement> products = searchPage.getListOfProductNames();
+        List<MobileElement> products = searchPageTab.getListOfProductNames();
         for (MobileElement element : products) {
             if (element.getText().contains(query)) {
                 result = true;
             }
         }
-        searchPage.getClearQueryButton().click();
+        searchPageTab.getClearQueryButton().click();
         Assert.assertEquals(result, true);
     }
 
@@ -241,12 +241,12 @@ public class SmokeTabletTest extends BaseTest {
 
     @Test(testName = "TC BILTAPPTST-280_1,2,3,4", enabled = true, priority = 18, description = "Product: Details page")
     public void openDetailsPageOfAnyProduct() throws InterruptedException {
-        searchPage.getCancelSearchButton().click();
+        searchPageTab.getCancelSearchButton().click();
         waitManager.waitElementToBeClickable(10, homePageTab.getSettingsButton());
         homePageTab.getYourProductSearchField().click();
-        searchPage.getViewAllProductButton().click();
-        waitManager.waitElementToBeVisible(20, searchPage.getSearchResultsQuantity());
-        listOfAllProducts = new ArrayList<>(searchPage.getListOfProductContainers());
+        searchPageTab.getViewAllProductButton().click();
+        waitManager.waitElementToBeVisible(20, searchPageTab.getSearchResultsQuantity());
+        listOfAllProducts = new ArrayList<>(searchPageTab.getListOfProductContainers());
         Random random = new Random(System.currentTimeMillis());
         elementIndex = random.nextInt(listOfAllProducts.size());
         listOfAllProducts.get(elementIndex).click();
@@ -422,7 +422,7 @@ public class SmokeTabletTest extends BaseTest {
     @Test(testName = "TC BILTAPPTST-292_4", enabled = true, priority = 32, description = "Product: Download model")
     public void startAssemblyTest() {
         modelOverviewPage.getBackButton().click();
-        waitManager.waitElementToBeClickable(10, searchPage.getViewAllProductButton());
+        waitManager.waitElementToBeClickable(10, searchPageTab.getViewAllProductButton());
         listOfAllProducts.get(elementIndex).click();
         waitManager.waitElementToBeClickable(20, modelOverviewPage.getStartAssemblyButton());
     }
@@ -456,12 +456,12 @@ public class SmokeTabletTest extends BaseTest {
         waitManager.waitElementToBeClickable(20, modelOverviewPage.getStartAssemblyButton());
         String productNameInDetailsPage = modelOverviewPage.getProductNameInDetailsPage().getText();
         modelOverviewPage.getBackButton().click();
-        waitManager.waitElementToBeClickable(10, searchPage.getCancelSearchButton());
-        searchPage.getCancelSearchButton().click();
+        waitManager.waitElementToBeClickable(10, searchPageTab.getCancelSearchButton());
+        searchPageTab.getCancelSearchButton().click();
         waitManager.waitElementToBeClickable(10, homePageTab.getSettingsButton());
         homePageTab.getMyStuffButton().click();
         DriverManager.getDriver().scrollTo(productNameInDetailsPage);
-        DriverManager.getDriver().tap(1, myStuffPage.getItemName(), 1);
+        DriverManager.getDriver().tap(1, myStuffPageTab.getItemName(), 1);
         waitManager.waitElementToBeClickable(20, modelOverviewPage.getStartAssemblyButton());
         String result = modelOverviewPage.getProductNameInDetailsPage().getText();
         Assert.assertEquals(productNameInDetailsPage, result);
@@ -500,13 +500,13 @@ public class SmokeTabletTest extends BaseTest {
         modelOverviewPage.getBackButton().click();
         waitManager.waitElementToBeClickable(10, homePageTab.getSettingsButton());
         homePageTab.getMyStuffButton().click();
-        myStuffPage.getEditButton().click();
-        myStuffPage.getRemoveItemButton().click();
+        myStuffPageTab.getEditButton().click();
+        myStuffPageTab.getRemoveItemButton().click();
     }
 
     @Test(testName = "TC BILTAPPTST-297_2", enabled = true, priority = 38, description = "[Android]Product:My Stuff remove model")
     public void myStuffEmptyMessageOneTest() {
-        String result = myStuffPage.getMyStuffIsEmptyMessageOne().getText();
+        String result = myStuffPageTab.getMyStuffIsEmptyMessageOne().getText();
         Assert.assertEquals(result, "Nothing to see here... yet.");
     }
 
@@ -520,7 +520,7 @@ public class SmokeTabletTest extends BaseTest {
                 break;
             }
         }
-        myStuffPage.getMyStuffHideButton().click();
+        myStuffPageTab.getMyStuffHideButton().click();
         Assert.assertEquals(result, true);
     }
 
@@ -658,7 +658,7 @@ public class SmokeTabletTest extends BaseTest {
 
     @Test(testName = "TC BILTAPPTST-303_2", enabled = true, priority = 50, description = "Sign In: Sign Up")
     public void signUpEnabledTest() {
-        fillTextFieldManager.fillTextField(signUpMenu.getSignUpMenuNameTextField(), "test");
+        fillTextFieldManager.fillTextField(signUpMenu.getNameSignUpTextField(), "test");
         fillTextFieldManager.fillTextField(signUpMenu.getLastNameTextField(), "test");
         fillTextFieldManager.fillTextField(signUpMenu.getEmailField(), "t@t.tt");
         fillTextFieldManager.fillTextField(signUpMenu.getPasswordField(), "test");
@@ -670,7 +670,7 @@ public class SmokeTabletTest extends BaseTest {
     @Test(testName = "TC BILTAPPTST-303_3", enabled = true, priority = 51, description = "Sign In: Sign Up",
             dataProvider = "Values for TC BILTAPPTST-303_3")
     public void signUpDisabledInvalidEmailTest(String email) {
-        fillTextFieldManager.fillTextField(signUpMenu.getSignUpMenuNameTextField(), "test");
+        fillTextFieldManager.fillTextField(signUpMenu.getNameSignUpTextField(), "test");
         fillTextFieldManager.fillTextField(signUpMenu.getLastNameTextField(), "test");
         fillTextFieldManager.fillTextField(signUpMenu.getEmailField(), email);
         fillTextFieldManager.fillTextField(signUpMenu.getPasswordField(), "test");

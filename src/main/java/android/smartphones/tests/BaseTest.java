@@ -1,7 +1,7 @@
 package android.smartphones.tests;
 
-import android.services.UserActionsManager;
-import android.services.WaitManager;
+import android.global_services.UserActionsManager;
+import android.global_services.WaitManager;
 import android.smartphones.pages.IntroductionPageSmart;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
