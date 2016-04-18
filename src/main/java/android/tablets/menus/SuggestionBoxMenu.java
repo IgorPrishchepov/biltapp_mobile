@@ -1,4 +1,4 @@
-package android.tablets.pop_up_menus;
+package android.tablets.menus;
 
 import android.global_menus.BaseMenu;
 import io.appium.java_client.MobileElement;

@@ -1,4 +1,4 @@
-package android.tablets.pop_up_menus;
+package android.tablets.menus;
 
 import android.global_menus.BaseMenu;
 import io.appium.java_client.MobileElement;
@@ -24,6 +24,12 @@ public class LabsModeMenu extends BaseMenu {
     @AndroidFindBy(id = "com.bilt.mobile:id/analyticsCheckbox")
     private MobileElement analyticsCheckBox;
 
+    @AndroidFindBy(id = "com.bilt.mobile:id/urlHhost")
+    private MobileElement urlTextField;
+
+    @AndroidFindBy(id = "com.bilt.mobile:id/saveButton")
+    private MobileElement saveButton;
+
     public MobileElement getLabsModeAgreeMenuMessage() {
         return labsModeAgreeMenuMessage;
     }
@@ -42,5 +48,12 @@ public class LabsModeMenu extends BaseMenu {
 
     public MobileElement getAnalyticsCheckBox() {
         return analyticsCheckBox;
+    }
+
+    public MobileElement getUrlTextField() {
+        return urlTextField;}
+
+    public MobileElement getSaveButton() {
+        return saveButton;
     }
 }

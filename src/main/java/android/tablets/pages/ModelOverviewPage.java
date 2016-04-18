@@ -1,7 +1,7 @@
 package android.tablets.pages;
 
 import android.global_pages.AbstractPage;
-import android.tablets.pop_up_menus.RegistrationMenu;
+import android.tablets.menus.RegistrationMenu;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 

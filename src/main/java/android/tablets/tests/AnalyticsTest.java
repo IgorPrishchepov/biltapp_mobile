@@ -1,6 +1,6 @@
 package android.tablets.tests;
 
-import android.tablets.pop_up_menus.LabsModeMenu;
+import android.tablets.menus.LabsModeMenu;
 import org.testng.annotations.Test;
 
 /**
@@ -16,9 +16,9 @@ public class AnalyticsTest extends BaseTest {
     }
 
     @Test(priority = 1, enabled = false, description = "Production, default settings, analytics ON")
-    public void openLicensesFiftyTimes() {
-        for (int i = 0; i < 50; i++) {
-            settingsManager.openLicenses();
+    public void openSuggBoxTwentyTimes() {
+        for (int i = 0; i < 20; i++) {
+            settingsManager.openSuggestionsBox();
             widgetView.getWidgetViewCloseButton().click();
         }
     }
@@ -28,12 +28,16 @@ public class AnalyticsTest extends BaseTest {
         settingsManager.openLabMode();
         LabsModeMenu labsModeMenu = new LabsModeMenu();
         labsModeMenu.getLabsModeYesButton().click();
-        homePageTab.getSettingsButton().click();
+        settingsManager.openMenuItem(1, 40, 800, 1);
+        fillTextFieldManager.fillTextField(new LabsModeMenu().getUrlTextField(), "stage");
+
+
+
     }
 
     @Test(priority = 3, enabled = false, description = "Production, Labs Mode ON, analytics OFF")
     public void openPrivacyStatementFiftyTimes() {
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < 20; i++) {
             waitManager.waitElementToBeClickable(10, homePageTab.getSettingsButton());
             homePageTab.getSettingsButton().click();
             settingsManager.openMenuItem(1, 40, 400, 1);
@@ -41,7 +45,7 @@ public class AnalyticsTest extends BaseTest {
         }
     }
 
-    @Test(priority = 4, enabled = true, description = "Production, Labs Mode ON, analytics ON")
+    @Test(priority = 4, enabled = false, description = "Production, Labs Mode ON, analytics ON")
     public void turnOnAnalyticsTest(){
         homePageTab.getSettingsButton().click();
         settingsManager.openMenuItem(1, 40, 800, 1);
@@ -49,12 +53,12 @@ public class AnalyticsTest extends BaseTest {
         new LabsModeMenu().getLeftMenuCloseButton().click();
     }
 
-    @Test(priority = 3, enabled = true, description = "Production, Labs Mode ON, analytics ON")
-    public void openTermsOfUsetFiftyTimes() {
-        for (int i = 0; i < 50; i++) {
+    @Test(priority = 3, enabled = false, description = "Production, Labs Mode ON, analytics ON")
+    public void openSignInFiftyTimes() {
+        for (int i = 0; i < 20; i++) {
             waitManager.waitElementToBeClickable(10, homePageTab.getSettingsButton());
             homePageTab.getSettingsButton().click();
-            settingsManager.openMenuItem(1, 40, 300, 1);
+            settingsManager.openMenuItem(1, 40, 200, 1);
             widgetView.getWidgetViewCloseButton().click();
         }
     }

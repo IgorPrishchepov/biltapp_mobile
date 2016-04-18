@@ -1,6 +1,6 @@
 package android.tablets.tests;
 
-import android.tablets.pop_up_menus.LabsModeMenu;
+import android.tablets.menus.LabsModeMenu;
 import io.appium.java_client.MobileElement;
 import org.testng.annotations.Test;
 

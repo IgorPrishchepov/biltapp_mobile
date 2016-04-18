@@ -1,8 +1,8 @@
 package android.tablets.tests;
 
 import android.DriverManager;
-import android.tablets.pop_up_menus.AndroidShareViaMenu;
-import android.tablets.pop_up_menus.SuggestionBoxMenu;
+import android.tablets.menus.AndroidShareViaMenu;
+import android.tablets.menus.SuggestionBoxMenu;
 import android.global_webviews.FacebookView;
 import io.appium.java_client.MobileElement;
 import org.openqa.selenium.By;
@@ -31,7 +31,7 @@ public class SmokeTabletTest extends BaseTest {
         introductionPage.getSkipButton().click();
     }
 
-    @Test(testName = "TC BILTAPPTST-268", enabled = true, priority = 0, description = "Introduction page swipe")
+    @Test(testName = "TC BILTAPPTST-268", enabled = false, priority = 0, description = "Introduction page swipe")
     public void swipeIntroductionPageTest() {
         waitManager.waitElementToBeClickable(15, introductionPage.getSkipButton());
         int result = 0;
@@ -46,7 +46,7 @@ public class SmokeTabletTest extends BaseTest {
         Assert.assertEquals(result, 3);
     }
 
-    @Test(testName = "TC BILTAPPTST-268", enabled = true, priority = 1, description = "Introduction page swipe")
+    @Test(testName = "TC BILTAPPTST-268", enabled = false, priority = 1, description = "Introduction page swipe")
     public void swipeIntroductionLastPageTest() {
         String result = introductionPage.getSkipButton().getText();
         userActionsManager.swipeToLeft();
@@ -54,7 +54,7 @@ public class SmokeTabletTest extends BaseTest {
         Assert.assertEquals(result, "Let's get started");
     }
 
-    @Test(testName = "TC BILTAPPTST-269", enabled = true, priority = 2, description = "Introduction page buttons")
+    @Test(testName = "TC BILTAPPTST-269", enabled = false, priority = 2, description = "Introduction page buttons")
     public void intoductionPageButtonsTest() {
         for (int i = 0; i < 4; i++) {
             settingsManager.openIntroductionPage();
@@ -65,7 +65,7 @@ public class SmokeTabletTest extends BaseTest {
         }
     }
 
-    @Test(testName = "TC BILTAPPTST-270", enabled = true, priority = 3, description = "Settings menu: Licenses")
+    @Test(testName = "TC BILTAPPTST-270", enabled = false, priority = 3, description = "Settings menu: Licenses")
     public void settingsMenuLicensesTest() {
         settingsManager.openLicenses();
         String result = widgetView.getTextViewTitle().getText();
@@ -74,7 +74,7 @@ public class SmokeTabletTest extends BaseTest {
         Assert.assertEquals(result, "Licenses");
     }
 
-    @Test(testName = "TC BILTAPPTST-272", enabled = true, priority = 4, description = "Settings menu: Suggestions Box")
+    @Test(testName = "TC BILTAPPTST-272", enabled = false, priority = 4, description = "Settings menu: Suggestions Box")
     public void settingsMenuSuggestionsBoxTest() {
         settingsManager.openSuggestionsBox();
         SuggestionBoxMenu suggestionBoxMenu = new SuggestionBoxMenu();
@@ -93,7 +93,7 @@ public class SmokeTabletTest extends BaseTest {
         Assert.assertEquals(result, "Suggestions Box");
     }
 
-    @Test(testName = "TC BILTAPPTST-273", enabled = true, priority = 6, description = "Settings menu: Privacy Statement")
+    @Test(testName = "TC BILTAPPTST-273", enabled = false, priority = 6, description = "Settings menu: Privacy Statement")
     public void settingsMenuPrivacyStatementTest() {
         settingsManager.openPrivacyStatement();
         String result = widgetView.getTextViewTitle().getText();
@@ -102,7 +102,7 @@ public class SmokeTabletTest extends BaseTest {
         Assert.assertEquals(result, "Privacy Statement");
     }
 
-    @Test(testName = "TC BILTAPPTST-274", enabled = true, priority = 7, description = "Settings menu: Terms of Use")
+    @Test(testName = "TC BILTAPPTST-274", enabled = false, priority = 7, description = "Settings menu: Terms of Use")
     public void settingsMenuTermsOfUseTest() {
         settingsManager.openTermsOfUse();
         String result = widgetView.getTextViewTitle().getText();
@@ -111,7 +111,7 @@ public class SmokeTabletTest extends BaseTest {
         Assert.assertEquals(result, "Terms of Use");
     }
 
-    @Test(testName = "TC BILTAPPTST-275", enabled = true, priority = 8, description = "Settings menu: SignIn")
+    @Test(testName = "TC BILTAPPTST-275", enabled = false, priority = 8, description = "Settings menu: SignIn")
     public void settingsMenuSignInTest() {
         settingsManager.openSignIn();
         String result = signInMenu.getMenuTitle().getText();

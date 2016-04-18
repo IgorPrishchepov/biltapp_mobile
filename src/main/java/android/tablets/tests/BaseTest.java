@@ -1,17 +1,17 @@
 package android.tablets.tests;
 
+import android.global_menus.ForgotPasswordMenu;
+import android.global_menus.SignInMenu;
+import android.global_menus.SignUpMenu;
 import android.global_pages.IntroductionPage;
 import android.global_services.FillTextFieldManager;
 import android.global_services.UserActionsManager;
 import android.global_services.WaitManager;
-import android.tablets.pages.*;
-import android.global_menus.ForgotPasswordMenu;
-import android.tablets.pop_up_menus.RegistrationMenu;
-import android.global_menus.SignInMenu;
-import android.global_menus.SignUpMenu;
-import android.tablets.settings_service.SettingsManager;
 import android.global_webviews.WidgetView;
-import org.testng.annotations.AfterClass;
+import android.tablets.pages.*;
+import android.tablets.menus.RegistrationMenu;
+import android.tablets.settings_service.SettingsManager;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 
 import static android.DriverManager.createAndroidDriver;
@@ -67,7 +67,7 @@ public class BaseTest {
 
     }
 
-    @AfterClass
+    @AfterSuite
     public void closeDriver() {
         try {
             getDriver().quit();
