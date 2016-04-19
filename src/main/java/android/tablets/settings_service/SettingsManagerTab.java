@@ -7,7 +7,7 @@ import android.global_services.WaitManager;
 /**
  * Created by Ihar_Pryshchepau on 3/22/2016.
  */
-public class SettingsManager {
+public class SettingsManagerTab {
 
     public void openMenuItem(int fingers, int x, int y, int duration) {
         DriverManager.getDriver().tap(fingers, x, y, duration);

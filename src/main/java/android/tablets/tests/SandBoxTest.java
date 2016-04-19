@@ -1,6 +1,6 @@
 package android.tablets.tests;
 
-import android.tablets.menus.LabsModeMenu;
+import android.global_menus.LabsModeMenu;
 import io.appium.java_client.MobileElement;
 import org.testng.annotations.Test;
 
@@ -23,7 +23,7 @@ public class SandBoxTest extends BaseTest {
 
     @Test(priority = 1, enabled = true)
     public void settingsTest() {
-        settingsManager.openLabMode();
+        settingsManagerTab.openLabMode();
         LabsModeMenu labsModeMenu = new LabsModeMenu();
         labsModeMenu.getLabsModeYesButton().click();
     }
@@ -77,7 +77,7 @@ public class SandBoxTest extends BaseTest {
     public void swipeIntroduction() throws InterruptedException {
         waitManager.waitElementToBeClickable(5, introductionPageSmart.getSkipButton());
         introductionPageSmart.getSkipButton().click();
-        settingsManager.openSettings();
+        settingsManagerTab.openSettings();
         Thread.sleep(5000);
     }
 

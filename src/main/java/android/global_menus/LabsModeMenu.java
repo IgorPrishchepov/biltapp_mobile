@@ -1,6 +1,5 @@
-package android.tablets.menus;
+package android.global_menus;
 
-import android.global_menus.BaseMenu;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 

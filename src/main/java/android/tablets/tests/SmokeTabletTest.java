@@ -2,7 +2,7 @@ package android.tablets.tests;
 
 import android.DriverManager;
 import android.tablets.menus.AndroidShareViaMenu;
-import android.tablets.menus.SuggestionBoxMenu;
+import android.global_menus.SuggestionBoxMenu;
 import android.global_webviews.FacebookView;
 import io.appium.java_client.MobileElement;
 import org.openqa.selenium.By;
@@ -57,7 +57,7 @@ public class SmokeTabletTest extends BaseTest {
     @Test(testName = "TC BILTAPPTST-269", enabled = false, priority = 2, description = "Introduction page buttons")
     public void intoductionPageButtonsTest() {
         for (int i = 0; i < 4; i++) {
-            settingsManager.openIntroductionPage();
+            settingsManagerTab.openIntroductionPage();
             waitManager.waitElementToBeClickable(10, introductionPage.getSkipButton());
             userActionsManager.swipeToLeftNumberOfTimes(i);
             introductionPage.getSkipButton().click();
@@ -67,7 +67,7 @@ public class SmokeTabletTest extends BaseTest {
 
     @Test(testName = "TC BILTAPPTST-270", enabled = false, priority = 3, description = "Settings menu: Licenses")
     public void settingsMenuLicensesTest() {
-        settingsManager.openLicenses();
+        settingsManagerTab.openLicenses();
         String result = widgetView.getTextViewTitle().getText();
         widgetView.getWidgetViewCloseButton().click();
         waitManager.waitElementToBeClickable(10, homePageTab.getSettingsButton());
@@ -76,7 +76,7 @@ public class SmokeTabletTest extends BaseTest {
 
     @Test(testName = "TC BILTAPPTST-272", enabled = false, priority = 4, description = "Settings menu: Suggestions Box")
     public void settingsMenuSuggestionsBoxTest() {
-        settingsManager.openSuggestionsBox();
+        settingsManagerTab.openSuggestionsBox();
         SuggestionBoxMenu suggestionBoxMenu = new SuggestionBoxMenu();
         fillTextFieldManager.fillTextField(suggestionBoxMenu.getSuggestionTextField(), "text");
         try {
@@ -86,7 +86,7 @@ public class SmokeTabletTest extends BaseTest {
             ex.printStackTrace();
         }
         waitManager.waitElementToBeClickable(10, homePageTab.getSettingsButton());
-        settingsManager.openSuggestionsBox();
+        settingsManagerTab.openSuggestionsBox();
         String result = suggestionBoxMenu.getMenuTitle().getText();
         suggestionBoxMenu.getMenuCloseButton().click();
         waitManager.waitElementToBeClickable(10, homePageTab.getSettingsButton());
@@ -95,7 +95,7 @@ public class SmokeTabletTest extends BaseTest {
 
     @Test(testName = "TC BILTAPPTST-273", enabled = false, priority = 6, description = "Settings menu: Privacy Statement")
     public void settingsMenuPrivacyStatementTest() {
-        settingsManager.openPrivacyStatement();
+        settingsManagerTab.openPrivacyStatement();
         String result = widgetView.getTextViewTitle().getText();
         widgetView.getWidgetViewCloseButton().click();
         waitManager.waitElementToBeClickable(10, homePageTab.getSettingsButton());
@@ -104,7 +104,7 @@ public class SmokeTabletTest extends BaseTest {
 
     @Test(testName = "TC BILTAPPTST-274", enabled = false, priority = 7, description = "Settings menu: Terms of Use")
     public void settingsMenuTermsOfUseTest() {
-        settingsManager.openTermsOfUse();
+        settingsManagerTab.openTermsOfUse();
         String result = widgetView.getTextViewTitle().getText();
         widgetView.getWidgetViewCloseButton().click();
         waitManager.waitElementToBeClickable(10, homePageTab.getSettingsButton());
@@ -113,7 +113,7 @@ public class SmokeTabletTest extends BaseTest {
 
     @Test(testName = "TC BILTAPPTST-275", enabled = false, priority = 8, description = "Settings menu: SignIn")
     public void settingsMenuSignInTest() {
-        settingsManager.openSignIn();
+        settingsManagerTab.openSignIn();
         String result = signInMenu.getMenuTitle().getText();
         signInMenu.getMenuCloseButton().click();
         waitManager.waitElementToBeClickable(10, homePageTab.getSettingsButton());

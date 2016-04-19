@@ -1,5 +1,6 @@
 package android.tablets.tests;
 
+import android.global_menus.BaseMenu;
 import android.global_menus.ForgotPasswordMenu;
 import android.global_menus.SignInMenu;
 import android.global_menus.SignUpMenu;
@@ -10,7 +11,7 @@ import android.global_services.WaitManager;
 import android.global_webviews.WidgetView;
 import android.tablets.pages.*;
 import android.tablets.menus.RegistrationMenu;
-import android.tablets.settings_service.SettingsManager;
+import android.tablets.settings_service.SettingsManagerTab;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 
@@ -26,7 +27,7 @@ public class BaseTest {
     protected HomePageTab homePageTab;
     protected WaitManager waitManager;
     protected UserActionsManager userActionsManager;
-    protected SettingsManager settingsManager;
+    protected SettingsManagerTab settingsManagerTab;
     protected MyStuffPageTab myStuffPageTab;
     protected WidgetView widgetView;
     protected SignInMenu signInMenu;
@@ -39,6 +40,7 @@ public class BaseTest {
     protected ForgotPasswordMenu forgotPasswordMenu;
     protected SignUpMenu signUpMenu;
     protected FillTextFieldManager fillTextFieldManager;
+    protected BaseMenu menu;
 
     @BeforeClass
     public void setupDriver() {
@@ -51,7 +53,7 @@ public class BaseTest {
         waitManager = new WaitManager();
         userActionsManager = new UserActionsManager();
         homePageTab = new HomePageTab();
-        settingsManager = new SettingsManager();
+        settingsManagerTab = new SettingsManagerTab();
         myStuffPageTab = new MyStuffPageTab();
         widgetView = new WidgetView();
         signInMenu = new SignInMenu();
@@ -64,6 +66,7 @@ public class BaseTest {
         forgotPasswordMenu = new ForgotPasswordMenu();
         signUpMenu = new SignUpMenu();
         fillTextFieldManager = new FillTextFieldManager();
+        menu = new BaseMenu();
 
     }
 

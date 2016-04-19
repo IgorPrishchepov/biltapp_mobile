@@ -25,12 +25,28 @@ public class UserActionsManager {
         }
     }
 
+    public void swipeToLeftNumberOfTimesSmart(int numberOfTimes) {
+        for (int i = 0; i < numberOfTimes; i++) {
+            Dimension size = getDriver().manage().window().getSize();
+            int startx = (int) (size.width * 0.8);
+            int endx = (int) (size.width * 0.20);
+            int starty = size.height / 2;
+            getDriver().swipe(startx, starty, endx, starty, 700);
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
     public void swipeToLeft() {
         Dimension size = getDriver().manage().window().getSize();
         int startx = (int) (size.width * 0.8);
         int endx = (int) (size.width * 0.20);
         int starty = size.height / 2;
-        getDriver().swipe(startx, starty, endx, starty, 900);
+        getDriver().swipe(startx, starty, endx, starty, 1000);
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
@@ -43,7 +59,7 @@ public class UserActionsManager {
         int startx = (int) (size.width * 0.8);
         int endx = (int) (size.width * 0.20);
         int starty = size.height / 2;
-        getDriver().swipe(startx, starty, endx, starty, 2000);
+        getDriver().swipe(startx, starty, endx, starty, 800);
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {

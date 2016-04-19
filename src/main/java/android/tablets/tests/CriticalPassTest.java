@@ -12,7 +12,7 @@ public class CriticalPassTest extends BaseTest {
     public void intoductionPageSwipeBackButtonsTest() {
         introductionPage.skipIntroPage();
         for (int i = 1; i < 4; i++) {
-            settingsManager.openIntroductionPage();
+            settingsManagerTab.openIntroductionPage();
             introductionPage.getToSpecificIntroPage(4);
             userActionsManager.swipeToRightNumberOfTimes(i);
             waitManager.waitElementToBeClickable(15, introductionPage.getSkipButton());
