@@ -9,10 +9,10 @@ import android.global_services.FillTextFieldManager;
 import android.global_services.UserActionsManager;
 import android.global_services.WaitManager;
 import android.global_webviews.WidgetView;
-import android.tablets.pages.*;
 import android.tablets.menus.RegistrationMenu;
+import android.tablets.pages.*;
 import android.tablets.settings_service.SettingsManagerTab;
-import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 import static android.DriverManager.createAndroidDriver;
@@ -70,7 +70,7 @@ public class BaseTest {
 
     }
 
-    @AfterSuite
+    @AfterClass
     public void closeDriver() {
         try {
             getDriver().quit();

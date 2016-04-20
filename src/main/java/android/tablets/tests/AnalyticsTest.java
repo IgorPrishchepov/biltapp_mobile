@@ -30,10 +30,8 @@ public class AnalyticsTest extends BaseTest {
         labsModeMenu.getLabsModeYesButton().click();
         settingsManagerTab.openMenuItem(1, 40, 800, 1);
         fillTextFieldManager.fillTextField(new LabsModeMenu().getUrlTextField(), "stage");
+        labsModeMenu.getSaveButton().click();
         menu.getLeftMenuCloseButton().click();
-
-
-
     }
 
     @Test(priority = 3, enabled = false, description = "Production, Labs Mode ON, analytics OFF")
@@ -47,7 +45,7 @@ public class AnalyticsTest extends BaseTest {
     }
 
     @Test(priority = 4, enabled = false, description = "Production, Labs Mode ON, analytics ON")
-    public void turnOnAnalyticsTest(){
+    public void turnOnAnalyticsTest() {
         homePageTab.getSettingsButton().click();
         settingsManagerTab.openMenuItem(1, 40, 800, 1);
         new LabsModeMenu().getAnalyticsCheckBox().click();
