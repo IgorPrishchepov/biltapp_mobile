@@ -169,7 +169,7 @@ public class SmokeTabletTest extends BaseTest {
     @DataProvider(name = "Values for TC BILTAPPTST-278")
     public Object[][] messagesForSearchResults() {
         return new Object[][]{
-                {"test", "0 search results"},
+                {"testnull", "0 search results"},
                 {"nexera", "1 search results"},
         };
     }
@@ -263,21 +263,22 @@ public class SmokeTabletTest extends BaseTest {
         listOfAllProducts.get(elementIndex).click();
     }
 
-    @Test(testName = "TC BILTAPPTST-281_1,2", enabled = true, priority = 19, description = "Product: Overview page Registration")
+    @Test(testName = "TC BILTAPPTST-281_1,2", enabled = true, priority = 20, description = "Product: Overview page Registration")
     public void registrationProductMenuTest() {
         waitManager.waitElementToBeClickable(20, modelOverviewPage.getGetInstructionsButton());
         registrationMenu = modelOverviewPage.openRegistrationMenu();
+        DriverManager.getDriver().findElement(By.id("com.bilt.mobile:id/registerBtn")).click();
         String result = registrationMenu.getMenuTitle().getText();
         Assert.assertEquals(result, "Product Registration");
     }
 
-    @Test(testName = "TC BILTAPPTST-281_3", enabled = true, priority = 20, description = "Product: Overview page Registration")
+    @Test(testName = "TC BILTAPPTST-281_3", enabled = true, priority = 21, description = "Product: Overview page Registration")
     public void registrationProductRegisterDisabledTest() {
         boolean result = registrationMenu.getRegisterButton().isEnabled();
         Assert.assertEquals(result, false);
     }
 
-    @Test(testName = "TC BILTAPPTST-281_4,5", enabled = true, priority = 21, description = "Product: Overview page Registration")
+    @Test(testName = "TC BILTAPPTST-281_4,5", enabled = true, priority = 22, description = "Product: Overview page Registration")
     public void registrationProductRegisterEnabledTest() {
         registrationMenu.getFirstNameTextField().sendKeys("test");
         registrationMenu.getLastNameTextField().sendKeys("test");
@@ -298,7 +299,7 @@ public class SmokeTabletTest extends BaseTest {
         Assert.assertEquals(result, true);
     }
 
-    @Test(testName = "TC BILTAPPTST-282_1", enabled = true, priority = 22, description = "Product: Overview page Registration")
+    @Test(testName = "TC BILTAPPTST-282_1", enabled = true, priority = 23, description = "Product: Overview page Registration")
     public void shareViaFromDetailsPageTest() {
         modelOverviewPage.getDetailsPageShareButton().click();
         AndroidShareViaMenu androidShareViaMenu = new AndroidShareViaMenu();
@@ -308,7 +309,7 @@ public class SmokeTabletTest extends BaseTest {
         Assert.assertEquals(result, "Share via");
     }
 
-    @Test(testName = "TC BILTAPPTST-282_1", enabled = true, priority = 23, description = "Product: Overview page Registration")
+    @Test(testName = "TC BILTAPPTST-282_1", enabled = true, priority = 24, description = "Product: Overview page Registration")
     public void openExtrasFromDetailsPageTest() {
         waitManager.waitElementToBeClickable(20, modelOverviewPage.getGetInstructionsButton());
         modelOverviewPage.openExtrasPage();
@@ -317,7 +318,7 @@ public class SmokeTabletTest extends BaseTest {
         Assert.assertEquals(result, "Extras:");
     }
 
-    @Test(testName = "TC BILTAPPTST-282_2", enabled = true, priority = 24, description = "Product: Overview page Registration")
+    @Test(testName = "TC BILTAPPTST-282_2", enabled = true, priority = 25, description = "Product: Overview page Registration")
     public void openWarningsWebViewFromExtrasPageTest() {
         boolean result = false;
         List<MobileElement> listOfContainers = new ArrayList<>(modelExtrasPage.getListOfWebViewContainers());
@@ -335,7 +336,7 @@ public class SmokeTabletTest extends BaseTest {
         Assert.assertEquals(result, true);
     }
 
-    @Test(testName = "TC BILTAPPTST-282_3", enabled = true, priority = 25, description = "Product: Overview page Registration")
+    @Test(testName = "TC BILTAPPTST-282_3", enabled = true, priority = 26, description = "Product: Overview page Registration")
     public void openWarrantyWebViewFromExtrasPageTest() {
         boolean result = false;
         List<MobileElement> listOfContainers = new ArrayList<>(modelExtrasPage.getListOfWebViewContainers());
@@ -354,7 +355,7 @@ public class SmokeTabletTest extends BaseTest {
         Assert.assertEquals(result, true);
     }
 
-    @Test(testName = "TC BILTAPPTST-282_4,5", enabled = true, priority = 26, description = "Product: Overview page Registration")
+    @Test(testName = "TC BILTAPPTST-282_4,5", enabled = true, priority = 27, description = "Product: Overview page Registration")
     public void openOverviewAndPartsListPagesFromExtrasPageTest() {
         modelExtrasPage.openOverviewPage();
         waitManager.waitElementToBeClickable(20, modelOverviewPage.getGetInstructionsButton());
@@ -369,7 +370,7 @@ public class SmokeTabletTest extends BaseTest {
         modelExtrasPage.openPartsListPage();
     }
 
-    @Test(testName = "TC BILTAPPTST-286_1", enabled = true, priority = 27, description = "Product: Overview page Registration")
+    @Test(testName = "TC BILTAPPTST-286_1", enabled = true, priority = 28, description = "Product: Overview page Registration")
     public void openPartsListPageFromOverviewPageTest() {
         modelPartsListPage.openOverviewPage();
         waitManager.waitElementToBeClickable(20, modelOverviewPage.getGetInstructionsButton());
@@ -381,14 +382,14 @@ public class SmokeTabletTest extends BaseTest {
         Assert.assertEquals(result, "Parts List:");
     }
 
-    @Test(testName = "TC BILTAPPTST-286_2,3", enabled = true, priority = 28, description = "Product: Overview page Registration")
+    @Test(testName = "TC BILTAPPTST-286_2,3", enabled = true, priority = 29, description = "Product: Overview page Registration")
     public void partsListPageContentTest() {
         waitManager.waitElementToBeClickable(10, modelPartsListPage.getGetInstructionsPartsListButton());
         String result = modelPartsListPage.getEmptyPartsListPageMessage().getText();
         Assert.assertEquals(result, "The parts list comes packaged with the instructions.");
     }
 
-    @Test(testName = "TC BILTAPPTST-292_1,2,3", enabled = true, priority = 29, description = "Product: Download model")
+    @Test(testName = "TC BILTAPPTST-292_1,2,3", enabled = true, priority = 30, description = "Product: Download model")
     public void partsListPageGetInstructionsTest() {
         modelPartsListPage.getGetInstructionsPartsListButton().click();
         waitManager.waitElementToBeClickable(90, modelOverviewPage.getStartAssemblyButton());
@@ -400,14 +401,14 @@ public class SmokeTabletTest extends BaseTest {
         Assert.assertEquals(result, true);
     }
 
-    @Test(testName = "TC BILTAPPTST-292_4", enabled = true, priority = 30, description = "Product: Download model")
+    @Test(testName = "TC BILTAPPTST-292_4", enabled = true, priority = 31, description = "Product: Download model")
     public void partsListPageMisingPartsTitleTest() {
         String result = modelPartsListPage.getMissingPartsInfoButton().getText();
         Assert.assertEquals(result, "Missing or broken parts?");
     }
 
 
-    @Test(testName = "TC BILTAPPTST-292_4", enabled = true, priority = 31, description = "Product: Download model")
+    @Test(testName = "TC BILTAPPTST-292_4", enabled = true, priority = 32, description = "Product: Download model")
     public void partsListPageMisingPartsTest() throws InterruptedException {
         modelPartsListPage.getMissingPartsInfoButton().click();
         waitManager.waitElementToBeVisibleByLocator(10, By.id("com.bilt.mobile:id/callAt"));
@@ -419,7 +420,7 @@ public class SmokeTabletTest extends BaseTest {
         Assert.assertEquals(result, true);
     }
 
-    @Test(testName = "TC BILTAPPTST-292_4", enabled = true, priority = 32, description = "Product: Download model")
+    @Test(testName = "TC BILTAPPTST-292_4", enabled = true, priority = 33, description = "Product: Download model")
     public void startAssemblyTest() {
         modelOverviewPage.getBackButton().click();
         waitManager.waitElementToBeClickable(10, searchPageTab.getViewAllProductButton());
@@ -427,7 +428,7 @@ public class SmokeTabletTest extends BaseTest {
         waitManager.waitElementToBeClickable(20, modelOverviewPage.getStartAssemblyButton());
     }
 
-    @Test(testName = "TC BILTAPPTST-294", enabled = true, priority = 33, description = "Product: Download model")
+    @Test(testName = "TC BILTAPPTST-294", enabled = true, priority = 34, description = "Product: Download model")
     public void extrasPageModelTest() {
         modelOverviewPage.openExtrasPage();
         waitManager.waitElementToBeClickable(20, modelExtrasPage.getExtrasPageButton());
@@ -450,7 +451,7 @@ public class SmokeTabletTest extends BaseTest {
         }
     }
 
-    @Test(testName = "TC BILTAPPTST-295_1", enabled = true, priority = 34, description = "Product: MyStuff")
+    @Test(testName = "TC BILTAPPTST-295_1", enabled = true, priority = 35, description = "Product: MyStuff")
     public void myStuffTest() {
         modelExtrasPage.openOverviewPage();
         waitManager.waitElementToBeClickable(20, modelOverviewPage.getStartAssemblyButton());
@@ -467,7 +468,7 @@ public class SmokeTabletTest extends BaseTest {
         Assert.assertEquals(productNameInDetailsPage, result);
     }
 
-    @Test(testName = "TC BILTAPPTST-296_1", enabled = true, priority = 35, description = "Product: Assembly")
+    @Test(testName = "TC BILTAPPTST-296_1", enabled = true, priority = 36, description = "Product: Assembly")
     public void startAssemblyWarningsTest() {
         modelOverviewPage.getStartAssemblyButton().click();
         waitManager.waitElementToBeVisible(20, widgetView.getTextViewTitle());
@@ -477,7 +478,7 @@ public class SmokeTabletTest extends BaseTest {
         Assert.assertEquals(result, "Warnings and Disclaimers");
     }
 
-    @Test(testName = "TC BILTAPPTST-296_2_3_4", enabled = true, priority = 36, description = "Product: Assembly")
+    @Test(testName = "TC BILTAPPTST-296_2_3_4", enabled = true, priority = 37, description = "Product: Assembly")
     public void assemblyPlayingTest() {
         modelOverviewPage.getStartAssemblyButton().click();
         waitManager.waitElementToBeVisible(20, widgetView.getTextViewTitle());
@@ -495,7 +496,7 @@ public class SmokeTabletTest extends BaseTest {
         }
     }
 
-    @Test(testName = "TC BILTAPPTST-297_1", enabled = true, priority = 37, description = "[Android]Product:My Stuff remove model")
+    @Test(testName = "TC BILTAPPTST-297_1", enabled = true, priority = 38, description = "[Android]Product:My Stuff remove model")
     public void myStuffRemoveTest() {
         modelOverviewPage.getBackButton().click();
         waitManager.waitElementToBeClickable(10, homePageTab.getSettingsButton());
@@ -504,13 +505,13 @@ public class SmokeTabletTest extends BaseTest {
         myStuffPageTab.getRemoveItemButton().click();
     }
 
-    @Test(testName = "TC BILTAPPTST-297_2", enabled = true, priority = 38, description = "[Android]Product:My Stuff remove model")
+    @Test(testName = "TC BILTAPPTST-297_2", enabled = true, priority = 39, description = "[Android]Product:My Stuff remove model")
     public void myStuffEmptyMessageOneTest() {
         String result = myStuffPageTab.getMyStuffIsEmptyMessageOne().getText();
         Assert.assertEquals(result, "Nothing to see here... yet.");
     }
 
-    @Test(testName = "TC BILTAPPTST-297_3", enabled = true, priority = 39, description = "[Android]Product:My Stuff remove model")
+    @Test(testName = "TC BILTAPPTST-297_3", enabled = true, priority = 40, description = "[Android]Product:My Stuff remove model")
     public void myStuffEmptyMessageTwoTest() {
         boolean result = false;
         List<MobileElement> listOfContainers = new ArrayList<>(widgetView.getListOfTextViews());
@@ -524,7 +525,7 @@ public class SmokeTabletTest extends BaseTest {
         Assert.assertEquals(result, true);
     }
 
-    @Test(testName = "TC BILTAPPTST-298_1,2,3", enabled = true, priority = 40, description = "Sign In: Sign In button",
+    @Test(testName = "TC BILTAPPTST-298_1,2,3", enabled = true, priority = 41, description = "Sign In: Sign In button",
             dataProvider = "Values for TC BILTAPPTST-298_1,2")
     public void signInButtonDisabledTest(String email, String password) {
         homePageTab.getSignInButton().click();
@@ -554,7 +555,7 @@ public class SmokeTabletTest extends BaseTest {
         };
     }
 
-    @Test(testName = "TC BILTAPPTST-298_4", enabled = true, priority = 41, description = "Sign In: Email")
+    @Test(testName = "TC BILTAPPTST-298_4", enabled = true, priority = 42, description = "Sign In: Email")
     public void signInEmailTest() {
         homePageTab.getSignInButton().click();
         signInMenu.getEmailField().click();
@@ -569,7 +570,7 @@ public class SmokeTabletTest extends BaseTest {
         Assert.assertEquals(result, true);
     }
 
-    @Test(testName = "TC BILTAPPTST-299_1,2,3", enabled = true, priority = 42, description = "Sign In: Forgot Password UI")
+    @Test(testName = "TC BILTAPPTST-299_1,2,3", enabled = true, priority = 43, description = "Sign In: Forgot Password UI")
     public void forgotYourPasswordTitleTest() {
         homePageTab.getSignInButton().click();
         signInMenu.getForgotPasswordButton().click();
@@ -580,7 +581,7 @@ public class SmokeTabletTest extends BaseTest {
         Assert.assertEquals(result, "Forgot Your Password?");
     }
 
-    @Test(testName = "TC BILTAPPTST-299_3", enabled = true, priority = 43, description = "Sign In: Forgot Password UI")
+    @Test(testName = "TC BILTAPPTST-299_3", enabled = true, priority = 44, description = "Sign In: Forgot Password UI")
     public void forgotYourPasswordMessageTest() {
         homePageTab.getSignInButton().click();
         signInMenu.getForgotPasswordButton().click();
@@ -598,7 +599,7 @@ public class SmokeTabletTest extends BaseTest {
         Assert.assertEquals(result, true);
     }
 
-    @Test(testName = "TC BILTAPPTST-300_1", enabled = true, priority = 44, description = "Sign In: Forgot Password Submit")
+    @Test(testName = "TC BILTAPPTST-300_1", enabled = true, priority = 45, description = "Sign In: Forgot Password Submit")
     public void forgotYourPasswordSubmitDisabledTest() {
         homePageTab.getSignInButton().click();
         signInMenu.getForgotPasswordButton().click();
@@ -606,7 +607,7 @@ public class SmokeTabletTest extends BaseTest {
         Assert.assertEquals(result, false);
     }
 
-    @Test(testName = "TC BILTAPPTST-300_2", enabled = true, priority = 45, description = "Sign In: Forgot Password Submit")
+    @Test(testName = "TC BILTAPPTST-300_2", enabled = true, priority = 46, description = "Sign In: Forgot Password Submit")
     public void forgotYourPasswordSubmitEnabledTest() {
         forgotPasswordMenu.getEmailField().click();
         forgotPasswordMenu.getEmailField().clear();
@@ -619,7 +620,7 @@ public class SmokeTabletTest extends BaseTest {
         Assert.assertEquals(result, true);
     }
 
-    @Test(testName = "TC BILTAPPTST-301_1,2,3", enabled = true, priority = 46, description = "Sign In: Forgot Password Submit")
+    @Test(testName = "TC BILTAPPTST-301_1,2,3", enabled = true, priority = 47, description = "Sign In: Forgot Password Submit")
     public void facebookSignInTest() {
         FacebookView facebookView = new FacebookView();
         homePageTab.getSignInButton().click();
@@ -632,7 +633,7 @@ public class SmokeTabletTest extends BaseTest {
         DriverManager.getDriver().navigate().back();
     }
 
-    @Test(testName = "TC BILTAPPTST-302_1", enabled = true, priority = 47, description = "Sign In: Sign Up")
+    @Test(testName = "TC BILTAPPTST-302_1", enabled = true, priority = 48, description = "Sign In: Sign Up")
     public void signUpTitleTest() {
         homePageTab.getSignInButton().click();
         signInMenu.getSignUpButton().click();
@@ -640,7 +641,7 @@ public class SmokeTabletTest extends BaseTest {
         Assert.assertEquals(result, "Create Account");
     }
 
-    @Test(testName = "TC BILTAPPTST-302_2", enabled = true, priority = 48, description = "Sign In: Sign Up")
+    @Test(testName = "TC BILTAPPTST-302_2", enabled = true, priority = 49, description = "Sign In: Sign Up")
     public void signUpNavigationTest() {
         signInMenu.getSignUpButton().click();
         signUpMenu.getLeftMenuCloseButton().click();
@@ -648,7 +649,7 @@ public class SmokeTabletTest extends BaseTest {
         signUpMenu.getMenuCloseButton().click();
     }
 
-    @Test(testName = "TC BILTAPPTST-303_1", enabled = true, priority = 49, description = "Sign In: Sign Up")
+    @Test(testName = "TC BILTAPPTST-303_1", enabled = true, priority = 50, description = "Sign In: Sign Up")
     public void signUpDisabledTest() {
         homePageTab.getSignInButton().click();
         signInMenu.getSignUpButton().click();
@@ -656,7 +657,7 @@ public class SmokeTabletTest extends BaseTest {
         Assert.assertEquals(result, false);
     }
 
-    @Test(testName = "TC BILTAPPTST-303_2", enabled = true, priority = 50, description = "Sign In: Sign Up")
+    @Test(testName = "TC BILTAPPTST-303_2", enabled = true, priority = 51, description = "Sign In: Sign Up")
     public void signUpEnabledTest() {
         fillTextFieldManager.fillTextField(signUpMenu.getNameSignUpTextField(), "test");
         fillTextFieldManager.fillTextField(signUpMenu.getLastNameTextField(), "test");
@@ -667,7 +668,7 @@ public class SmokeTabletTest extends BaseTest {
         Assert.assertEquals(result, true);
     }
 
-    @Test(testName = "TC BILTAPPTST-303_3", enabled = true, priority = 51, description = "Sign In: Sign Up",
+    @Test(testName = "TC BILTAPPTST-303_3", enabled = true, priority = 52, description = "Sign In: Sign Up",
             dataProvider = "Values for TC BILTAPPTST-303_3")
     public void signUpDisabledInvalidEmailTest(String email) {
         fillTextFieldManager.fillTextField(signUpMenu.getNameSignUpTextField(), "test");
