@@ -37,7 +37,7 @@
         </entry>
       </file>
       <file leaf-file-name="android_tablet_.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/test_suites/android_tablet_.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/android_tablet_.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-5.870968">
               <caret line="7" column="69" selection-start-line="7" selection-start-column="69" selection-end-line="7" selection-end-column="69" />
@@ -109,8 +109,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48722318">
-              <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.37989777">
+              <caret line="26" column="62" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -269,10 +269,6 @@
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test_suites" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -324,6 +320,7 @@
       <recent name="D:\PROJECTS\BILT\GitHub_repo\biltApp\src\test" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PROJECTS\BILT\GitHub_repo\biltApp\src\main\resources" />
       <recent name="D:\PROJECTS\BILT\GitHub_repo\biltApp\src\test\resources" />
       <recent name="D:\PROJECTS\BILT\GitHub_repo\biltApp\src\main\resources\test_suites" />
     </key>
@@ -789,11 +786,11 @@
     <history-entry file="D__PROJECTS_BILT_GitHub_repo_biltApp_src_main_resources_test_suites_android_tablet__xml - 2016.05.13 at 12h 24m 39s.xml">
       <configuration name="D:/PROJECTS/BILT/GitHub_repo/biltApp/src/main/resources/test_suites/android_tablet_.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SandBoxTest_(1) - 2016.05.04 at 14h 49m 15s.xml">
-      <configuration name="SandBoxTest (1)" configurationId="TestNG" />
+    <history-entry file="D__PROJECTS_BILT_GitHub_repo_biltApp_src_main_resources_test_suites_android_tablet__xml - 2016.05.13 at 12h 53m 38s.xml">
+      <configuration name="D:/PROJECTS/BILT/GitHub_repo/biltApp/src/main/resources/test_suites/android_tablet_.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SandBoxTest_(1) - 2016.05.04 at 14h 49m 35s.xml">
-      <configuration name="SandBoxTest (1)" configurationId="TestNG" />
+    <history-entry file="D__PROJECTS_BILT_GitHub_repo_biltApp_src_main_resources_test_suites_android_tablet__xml - 2016.05.13 at 12h 54m 16s.xml">
+      <configuration name="D:/PROJECTS/BILT/GitHub_repo/biltApp/src/main/resources/test_suites/android_tablet_.xml" configurationId="TestNG" />
     </history-entry>
     <history-entry file="SandBoxTest_(1) - 2016.05.04 at 14h 50m 15s.xml">
       <configuration name="SandBoxTest (1)" configurationId="TestNG" />
@@ -1222,14 +1219,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/test_suites/android_tablet_.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.870968">
-          <caret line="7" column="69" selection-start-line="7" selection-start-column="69" selection-end-line="7" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/android/tablets/tests/SandBoxTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1238,10 +1227,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/android_tablet_.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.870968">
+          <caret line="7" column="69" selection-start-line="7" selection-start-column="69" selection-end-line="7" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48722318">
-          <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.37989777">
+          <caret line="26" column="62" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
           <folding />
         </state>
       </provider>
