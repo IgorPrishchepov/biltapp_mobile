@@ -27,7 +27,7 @@
                         <reporter.debug>false</reporter.debug>
                     </systemPropertyVariables>
                     <suiteXmlFiles>
-                        <suiteXmlFile>test_suites/android_tablet_.xml</suiteXmlFile>
+                        <suiteXmlFile>/resources/test_suites/android_tablet_.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
