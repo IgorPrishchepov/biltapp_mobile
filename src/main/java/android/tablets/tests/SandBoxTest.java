@@ -1,11 +1,6 @@
 package android.tablets.tests;
 
-import android.DriverManager;
-import android.global_menus.SuggestionBoxMenu;
 import io.appium.java_client.MobileElement;
-import org.openqa.selenium.NoSuchElementException;
-import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.util.List;
@@ -22,10 +17,10 @@ public class SandBoxTest extends BaseTest {
     public void skipIntro() {
         waitManager.waitElementToBeClickable(15, introductionPage.getSkipButton());
         introductionPage.getSkipButton().click();
-    //    waitManager.waitElementToBeClickable(10, homePageTab.getSettingsButton());
+        waitManager.waitElementToBeClickable(10, homePageTab.getSettingsButton());
 
     }
-
+/*
     @Test(testName = "TC BILTAPPTST-268", enabled = true, priority = 0, description = "Introduction page swipe")
     public void swipeIntroductionPageTest() {
         waitManager.waitElementToBeClickable(15, introductionPage.getSkipButton());

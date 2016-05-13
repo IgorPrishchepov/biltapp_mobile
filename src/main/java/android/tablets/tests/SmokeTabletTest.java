@@ -295,6 +295,7 @@ public class SmokeTabletTest extends BaseTest {
         registrationMenu.getAgreementCustomerCheckBox().click();
         boolean result = registrationMenu.getRegisterButton().isEnabled();
         registrationMenu.getMenuCloseButton().click();
+        registrationMenu.getMenuCloseButton().click();
         waitManager.waitElementToBeClickable(20, modelOverviewPage.getGetInstructionsButton());
         Assert.assertEquals(result, true);
     }
