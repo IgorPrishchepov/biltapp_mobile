@@ -19,7 +19,9 @@
             </plugin>
         </plugins>
     </build>
-
+    <properties>
+        <suiteXmlFile>test_suites/android_tablet_.xml</suiteXmlFile>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>org.testng</groupId>
