@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30f31775-2cdc-468e-b3e0-940bff429f97" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/android/smartphones/titles_and_messages/Fields.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/android/smartphones/titles_and_messages/Menus.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/android/DriverManager.class" afterPath="$PROJECT_DIR$/target/classes/android/DriverManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/android/smartphones/tests/BaseTest.class" afterPath="$PROJECT_DIR$/target/classes/android/smartphones/tests/BaseTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/android/tablets/tests/BaseTest.class" afterPath="$PROJECT_DIR$/target/classes/android/tablets/tests/BaseTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/android/DriverManager.java" afterPath="$PROJECT_DIR$/src/main/java/android/DriverManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/android/smartphones/tests/BaseTest.java" afterPath="$PROJECT_DIR$/src/main/java/android/smartphones/tests/BaseTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/android/smartphones/tests/SmartSmokeTest.java" afterPath="$PROJECT_DIR$/src/main/java/android/smartphones/tests/SmartSmokeTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/android/tablets/tests/BaseTest.java" afterPath="$PROJECT_DIR$/src/main/java/android/tablets/tests/BaseTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/testsuites/android_tablet_.xml" afterPath="$PROJECT_DIR$/src/main/resources/testsuites/android_tablet_.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/testsuites/android_tablet_.xml" afterPath="$PROJECT_DIR$/target/classes/testsuites/android_tablet_.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="com.bilt.mobile.autotest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -85,8 +74,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5229983">
-              <caret line="29" column="86" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="86" />
+            <state vertical-scroll-proportion="0.70017034">
+              <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -213,9 +202,9 @@
         <option value="$PROJECT_DIR$/src/main/java/android/tablets/tests/BaseTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/android/DriverManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/android/smartphones/tests/BaseTest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/android/smartphones/tests/SmartSmokeTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/testsuites/android_tablet_.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -1000,9 +989,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="D__PROJECTS_BILT_GitHub_repo_biltApp_src_main_resources_testsuites_android_tablet__xml - 2016.05.13 at 15h 05m 56s.xml">
-      <configuration name="D:/PROJECTS/BILT/GitHub_repo/biltApp/src/main/resources/testsuites/android_tablet_.xml" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="D__PROJECTS_BILT_GitHub_repo_biltApp_src_main_resources_testsuites_android_tablet__xml - 2016.05.17 at 14h 17m 14s.xml">
       <configuration name="D:/PROJECTS/BILT/GitHub_repo/biltApp/src/main/resources/testsuites/android_tablet_.xml" configurationId="TestNG" />
     </history-entry>
@@ -1010,6 +996,9 @@
       <configuration name="D:/PROJECTS/BILT/GitHub_repo/biltApp/src/main/resources/testsuites/android_tablet_.xml" configurationId="TestNG" />
     </history-entry>
     <history-entry file="D__PROJECTS_BILT_GitHub_repo_biltApp_src_main_resources_testsuites_android_tablet__xml - 2016.05.17 at 14h 49m 45s.xml">
+      <configuration name="D:/PROJECTS/BILT/GitHub_repo/biltApp/src/main/resources/testsuites/android_tablet_.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="D__PROJECTS_BILT_GitHub_repo_biltApp_src_main_resources_testsuites_android_tablet__xml - 2016.05.17 at 14h 53m 17s.xml">
       <configuration name="D:/PROJECTS/BILT/GitHub_repo/biltApp/src/main/resources/testsuites/android_tablet_.xml" configurationId="TestNG" />
     </history-entry>
     <history-entry file="SandBoxTest_(1) - 2016.05.04 at 14h 50m 15s.xml">
@@ -1042,7 +1031,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1874" height="1096" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32987553" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1516,8 +1505,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5229983">
-          <caret line="29" column="86" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="86" />
+        <state vertical-scroll-proportion="0.70017034">
+          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
           <folding />
         </state>
       </provider>
