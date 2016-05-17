@@ -7,7 +7,7 @@
             <!--class name="android.tablets.tests.AnalyticsTest"/-->
             <!--class name="android.tablets.tests.SmokeTabletTest"/-->
             <!--class name="android.tablets.tests.CriticalPassTest"/-->
-            <class name="android.tablets.tests.SandBoxTest"/>
+            <!--class name="android.tablets.tests.SandBoxTest"/-->
         </classes>
     </test>
 

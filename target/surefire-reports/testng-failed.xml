@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Smoke Test]">
+  <test name="Android Tablet Smoke(failed)">
+    <classes>
+      <class name="android.tablets.tests.SandBoxTest">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="skipIntro"/>
+          <include name="setupDriver"/>
+        </methods>
+      </class> <!-- android.tablets.tests.SandBoxTest -->
+    </classes>
+  </test> <!-- Android Tablet Smoke(failed) -->
+</suite> <!-- Failed suite [Smoke Test] -->
