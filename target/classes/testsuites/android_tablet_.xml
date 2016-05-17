@@ -3,11 +3,12 @@
 <suite name="Smoke Test" verbose="1" thread-count="1">
 
     <test enabled="true" name="Android Tablet Smoke" preserve-order="true">
+        <parameter name="appPath" value="C:\Users\Ihar_Pryshchepau\Downloads\BILT\preprod\BILT_119p.apk"/>
         <classes>
             <!--class name="android.tablets.tests.AnalyticsTest"/-->
             <!--class name="android.tablets.tests.SmokeTabletTest"/-->
             <!--class name="android.tablets.tests.CriticalPassTest"/-->
-            <!--class name="android.tablets.tests.SandBoxTest"/-->
+            <class name="android.tablets.tests.SandBoxTest"/>
         </classes>
     </test>
 

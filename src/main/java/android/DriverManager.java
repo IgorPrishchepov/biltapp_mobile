@@ -18,14 +18,14 @@ public class DriverManager {
     private static final String WD_SERVER_ROOT = "/wd/hub";
     private static final ThreadLocal<AppiumDriver> driverPool = new ThreadLocal<>();
     private static AppiumDriver driver;
+    private static String appPath;
 
-
-    public static void createAndroidDriver() throws Exception {
+    public static void createAndroidDriver(String appPath) throws Exception {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability(PLATFORM_NAME, "Android");
         caps.setCapability(PLATFORM_VERSION, "5.0");
         caps.setCapability(DEVICE_NAME, "Device_1");
-        caps.setCapability(APP, "C:\\Users\\Ihar_Pryshchepau\\Downloads\\BILT\\preprod\\BILT_113p.apk");
+        caps.setCapability(APP, appPath);
         driver = new AndroidDriver(new URL(URI_SCHEME + "127.0.0.1:4723" + WD_SERVER_ROOT), caps);
         driverPool.set(driver);
         driverPool.get().manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
@@ -35,5 +35,11 @@ public class DriverManager {
         return driverPool.get();
     }
 
+    public static void setAppPath(String appPath) {
+        DriverManager.appPath = appPath;
+    }
 
+    public static String getAppPath() {
+        return appPath;
+    }
 }

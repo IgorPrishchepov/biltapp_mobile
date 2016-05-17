@@ -11,6 +11,7 @@ import android.smartphones.pages.IntroductionPageSmart;
 import android.smartphones.settings_service.SettingsManagerSmart;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 
 import static android.DriverManager.createAndroidDriver;
 import static android.DriverManager.getDriver;
@@ -30,11 +31,11 @@ public class BaseTest {
     protected BaseMenu baseMenu;
     protected FillTextFieldManager fillTextFieldManager;
 
-
+    @Parameters({"appPath"})
     @BeforeClass
-    public void setupDriver() {
+    public void setupDriver(String appPath) {
         try {
-            createAndroidDriver();
+            createAndroidDriver(appPath);
         } catch (Exception e) {
             e.printStackTrace();
         }

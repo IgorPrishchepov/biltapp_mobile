@@ -7,8 +7,8 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-import static android.smartphones.titles_and_messages.Buttons.LETS_START_BUTTON_NAME;
 import static android.smartphones.titles_and_messages.Buttons.SKIP_BUTTON_NAME;
+import static android.smartphones.titles_and_messages.Buttons.LETS_START_BUTTON_NAME;
 import static android.smartphones.titles_and_messages.Pages.*;
 
 /**
