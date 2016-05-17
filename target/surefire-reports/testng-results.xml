@@ -2,20 +2,27 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Smoke Test" duration-ms="19938" started-at="2016-05-17T11:18:21Z" finished-at="2016-05-17T11:18:41Z">
+  <suite name="Smoke Test" duration-ms="19528" started-at="2016-05-17T11:56:47Z" finished-at="2016-05-17T11:57:06Z">
     <groups>
     </groups>
-    <test name="Android Tablet Smoke" duration-ms="19938" started-at="2016-05-17T11:18:21Z" finished-at="2016-05-17T11:18:41Z">
+    <test name="Android Tablet Smoke" duration-ms="19528" started-at="2016-05-17T11:56:47Z" finished-at="2016-05-17T11:57:06Z">
       <class name="android.tablets.tests.SandBoxTest">
-        <test-method status="PASS" signature="setupDriver()[pri:0, instance:android.tablets.tests.SandBoxTest@5315b42e]" name="setupDriver" is-config="true" duration-ms="14395" started-at="2016-05-17T14:18:21Z" finished-at="2016-05-17T14:18:35Z">
+        <test-method status="PASS" signature="setupDriver(java.lang.String)[pri:0, instance:android.tablets.tests.SandBoxTest@60addb54]" name="setupDriver" is-config="true" duration-ms="14015" started-at="2016-05-17T14:56:47Z" finished-at="2016-05-17T14:57:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[C:\Users\Ihar_Pryshchepau\Downloads\BILT\preprod\BILT_119p.apk]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupDriver -->
-        <test-method status="PASS" signature="skipIntro()[pri:0, instance:android.tablets.tests.SandBoxTest@5315b42e]" name="skipIntro" duration-ms="4325" started-at="2016-05-17T14:18:35Z" finished-at="2016-05-17T14:18:40Z">
+        <test-method status="PASS" signature="skipIntro()[pri:0, instance:android.tablets.tests.SandBoxTest@60addb54]" name="skipIntro" duration-ms="4237" started-at="2016-05-17T14:57:01Z" finished-at="2016-05-17T14:57:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- skipIntro -->
-        <test-method status="PASS" signature="closeDriver()[pri:0, instance:android.tablets.tests.SandBoxTest@5315b42e]" name="closeDriver" is-config="true" duration-ms="1211" started-at="2016-05-17T14:18:40Z" finished-at="2016-05-17T14:18:41Z">
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:android.tablets.tests.SandBoxTest@60addb54]" name="closeDriver" is-config="true" duration-ms="1269" started-at="2016-05-17T14:57:05Z" finished-at="2016-05-17T14:57:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->

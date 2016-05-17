@@ -18,7 +18,6 @@ public class DriverManager {
     private static final String WD_SERVER_ROOT = "/wd/hub";
     private static final ThreadLocal<AppiumDriver> driverPool = new ThreadLocal<>();
     private static AppiumDriver driver;
-    private static String appPath;
 
     public static void createAndroidDriver(String appPath) throws Exception {
         DesiredCapabilities caps = new DesiredCapabilities();
@@ -35,11 +34,5 @@ public class DriverManager {
         return driverPool.get();
     }
 
-    public static void setAppPath(String appPath) {
-        DriverManager.appPath = appPath;
-    }
 
-    public static String getAppPath() {
-        return appPath;
-    }
 }

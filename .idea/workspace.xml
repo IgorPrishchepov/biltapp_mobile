@@ -2,8 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30f31775-2cdc-468e-b3e0-940bff429f97" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/android/global_menus/SignInMenu.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/android/global_pages/IntroductionPage.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/android/global_services/FillTextFieldManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/android/global_services/UserActionsManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/android/global_services/WaitManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/android/global_webviews/WidgetView.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/android/smartphones/pages/IntroductionPageSmart.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/android/smartphones/pages/PreSettingsPageSmart.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/android/smartphones/pages/SettingsPageSmart.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/android/smartphones/settings_service/SettingsManagerSmart.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/android/smartphones/tests/BaseTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/android/smartphones/titles_and_messages/Buttons.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/android/smartphones/titles_and_messages/Fields.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/android/smartphones/titles_and_messages/Menus.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/android/smartphones/titles_and_messages/Pages.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/android/tablets/menus/RegistrationMenu.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/android/tablets/pages/ModelExtrasPage.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/android/tablets/pages/ModelOverviewPage.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/android/tablets/pages/MyStuffPageTab.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/android/DriverManager.class" afterPath="$PROJECT_DIR$/target/classes/android/DriverManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.bilt.mobile.autotest-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/com.bilt.mobile.autotest-1.0-SNAPSHOT.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/android/DriverManager.java" afterPath="$PROJECT_DIR$/src/main/java/android/DriverManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/Smoke Test/Android Tablet Smoke.html" afterPath="$PROJECT_DIR$/target/surefire-reports/Smoke Test/Android Tablet Smoke.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/Smoke Test/Android Tablet Smoke.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/Smoke Test/Android Tablet Smoke.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-TestSuite.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-TestSuite.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TestSuite.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/TestSuite.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" afterPath="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/index.html" afterPath="$PROJECT_DIR$/target/surefire-reports/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/junitreports/TEST-android.tablets.tests.SandBoxTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/junitreports/TEST-android.tablets.tests.SandBoxTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/old/Smoke Test/methods-alphabetical.html" afterPath="$PROJECT_DIR$/target/surefire-reports/old/Smoke Test/methods-alphabetical.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/old/Smoke Test/methods.html" afterPath="$PROJECT_DIR$/target/surefire-reports/old/Smoke Test/methods.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/old/Smoke Test/testng.xml.html" afterPath="$PROJECT_DIR$/target/surefire-reports/old/Smoke Test/testng.xml.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" />
     </list>
     <ignored path="com.bilt.mobile.autotest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,16 +59,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SmokeTabletTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/android/tablets/tests/SmokeTabletTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="406" column="81" selection-start-line="406" selection-start-column="81" selection-end-line="406" selection-end-column="81" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="android_tablet_.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/testsuites/android_tablet_.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -46,17 +69,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DriverManager.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DriverManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/android/DriverManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="55" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
-              <folding>
-                <element signature="e#1354#1355#0" expanded="true" />
-                <element signature="e#1401#1402#0" expanded="true" />
-                <element signature="e#1442#1443#0" expanded="true" />
-                <element signature="e#1472#1473#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.32686085">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -71,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.70017034">
-              <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+            <state vertical-scroll-proportion="-8.387096">
+              <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -85,7 +103,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/android/tablets/tests/BaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="47" column="42" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="42" />
+              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,8 +125,10 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/android/smartphones/tests/BaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-              <folding />
+              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -128,6 +148,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="48" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IntroductionPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/android/global_pages/IntroductionPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -200,11 +230,11 @@
         <option value="$PROJECT_DIR$/src/main/resources/test_suites/android_tablet_.xml" />
         <option value="$PROJECT_DIR$/src/main/java/android/tablets/tests/SandBoxTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/android/tablets/tests/BaseTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/android/DriverManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/android/smartphones/tests/BaseTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/android/smartphones/tests/SmartSmokeTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/testsuites/android_tablet_.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/android/DriverManager.java" />
       </list>
     </option>
   </component>
@@ -500,6 +530,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="smartphones" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.bilt.mobile.autotest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="biltApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="global_pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -989,35 +1049,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="D__PROJECTS_BILT_GitHub_repo_biltApp_src_main_resources_testsuites_android_tablet__xml - 2016.05.17 at 14h 17m 14s.xml">
-      <configuration name="D:/PROJECTS/BILT/GitHub_repo/biltApp/src/main/resources/testsuites/android_tablet_.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="D__PROJECTS_BILT_GitHub_repo_biltApp_src_main_resources_testsuites_android_tablet__xml - 2016.05.17 at 14h 47m 59s.xml">
-      <configuration name="D:/PROJECTS/BILT/GitHub_repo/biltApp/src/main/resources/testsuites/android_tablet_.xml" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="D__PROJECTS_BILT_GitHub_repo_biltApp_src_main_resources_testsuites_android_tablet__xml - 2016.05.17 at 14h 49m 45s.xml">
       <configuration name="D:/PROJECTS/BILT/GitHub_repo/biltApp/src/main/resources/testsuites/android_tablet_.xml" configurationId="TestNG" />
     </history-entry>
     <history-entry file="D__PROJECTS_BILT_GitHub_repo_biltApp_src_main_resources_testsuites_android_tablet__xml - 2016.05.17 at 14h 53m 17s.xml">
       <configuration name="D:/PROJECTS/BILT/GitHub_repo/biltApp/src/main/resources/testsuites/android_tablet_.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SandBoxTest_(1) - 2016.05.04 at 14h 50m 15s.xml">
-      <configuration name="SandBoxTest (1)" configurationId="TestNG" />
+    <history-entry file="D__PROJECTS_BILT_GitHub_repo_biltApp_src_main_resources_testsuites_android_tablet__xml - 2016.05.17 at 15h 00m 29s.xml">
+      <configuration name="D:/PROJECTS/BILT/GitHub_repo/biltApp/src/main/resources/testsuites/android_tablet_.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SandBoxTest_(1) - 2016.05.04 at 14h 54m 42s.xml">
-      <configuration name="SandBoxTest (1)" configurationId="TestNG" />
+    <history-entry file="D__PROJECTS_BILT_GitHub_repo_biltApp_src_main_resources_testsuites_android_tablet__xml - 2016.05.17 at 15h 00m 54s.xml">
+      <configuration name="D:/PROJECTS/BILT/GitHub_repo/biltApp/src/main/resources/testsuites/android_tablet_.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SandBoxTest_(1) - 2016.05.04 at 15h 07m 22s.xml">
-      <configuration name="SandBoxTest (1)" configurationId="TestNG" />
+    <history-entry file="D__PROJECTS_BILT_GitHub_repo_biltApp_src_main_resources_testsuites_android_tablet__xml - 2016.05.17 at 15h 01m 47s.xml">
+      <configuration name="D:/PROJECTS/BILT/GitHub_repo/biltApp/src/main/resources/testsuites/android_tablet_.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SandBoxTest_(1) - 2016.05.04 at 15h 27m 40s.xml">
-      <configuration name="SandBoxTest (1)" configurationId="TestNG" />
+    <history-entry file="D__PROJECTS_BILT_GitHub_repo_biltApp_src_main_resources_testsuites_android_tablet__xml - 2016.05.17 at 15h 02m 19s.xml">
+      <configuration name="D:/PROJECTS/BILT/GitHub_repo/biltApp/src/main/resources/testsuites/android_tablet_.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SandBoxTest_(1) - 2016.05.04 at 15h 35m 23s.xml">
-      <configuration name="SandBoxTest (1)" configurationId="TestNG" />
+    <history-entry file="D__PROJECTS_BILT_GitHub_repo_biltApp_src_main_resources_testsuites_android_tablet__xml - 2016.05.17 at 15h 02m 28s.xml">
+      <configuration name="D:/PROJECTS/BILT/GitHub_repo/biltApp/src/main/resources/testsuites/android_tablet_.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SandBoxTest_openOverviewAndPartsListPagesFromExtrasPageTest - 2016.05.04 at 14h 46m 55s.xml">
-      <configuration name="SandBoxTest.openOverviewAndPartsListPagesFromExtrasPageTest" configurationId="TestNG" />
+    <history-entry file="D__PROJECTS_BILT_GitHub_repo_biltApp_src_main_resources_testsuites_android_tablet__xml - 2016.05.17 at 15h 02m 41s.xml">
+      <configuration name="D:/PROJECTS/BILT/GitHub_repo/biltApp/src/main/resources/testsuites/android_tablet_.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="D__PROJECTS_BILT_GitHub_repo_biltApp_src_main_resources_testsuites_android_tablet__xml - 2016.05.17 at 15h 03m 35s.xml">
+      <configuration name="D:/PROJECTS/BILT/GitHub_repo/biltApp/src/main/resources/testsuites/android_tablet_.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="D__PROJECTS_BILT_GitHub_repo_biltApp_src_main_resources_testsuites_android_tablet__xml - 2016.05.17 at 15h 05m 24s.xml">
+      <configuration name="D:/PROJECTS/BILT/GitHub_repo/biltApp/src/main/resources/testsuites/android_tablet_.xml" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -1031,7 +1091,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1874" height="1096" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32987553" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1374,13 +1434,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/android/global_pages/IntroductionPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/android/tablets/tests/CriticalPassTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1448,37 +1501,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/android/DriverManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="55" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
-          <folding>
-            <element signature="e#1354#1355#0" expanded="true" />
-            <element signature="e#1401#1402#0" expanded="true" />
-            <element signature="e#1442#1443#0" expanded="true" />
-            <element signature="e#1472#1473#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/android/tablets/tests/BaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="42" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/android/smartphones/tests/BaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/android/smartphones/titles_and_messages/Buttons.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1495,6 +1517,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.387096">
+          <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/testsuites/android_tablet_.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.709677">
@@ -1503,10 +1533,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/android/global_pages/IntroductionPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70017034">
-          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/android/tablets/tests/BaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/android/smartphones/tests/BaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/android/DriverManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32686085">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
