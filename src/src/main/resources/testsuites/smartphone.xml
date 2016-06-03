@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Smoke Test" verbose="1" thread-count="1">
+
+
+    <test enabled="true" name="iOS Test" preserve-order="true">
+        <parameter name="driverType" value="ios"/>
+        <parameter name="appPath" value="/Users/Ihar_Pryshchepau/Desktop/BILT.app"/>
+        <parameter name="deviceName" value="iPhone 5s"/>
+        <classes>
+            <class name="ios.BaseTest"/>
+        </classes>
+    </test>
+</suite>

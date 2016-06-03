@@ -3,7 +3,7 @@
 <suite name="Smoke Test" verbose="1" thread-count="1">
 
     <test enabled="true" name="Android Tablet Smoke" preserve-order="true">
-        <parameter name="appPath" value="C:\Users\Ihar_Pryshchepau\Downloads\BILT\preprod\BILT_119p.apk"/>
+        <parameter name="appPath" value="C:\Users\Ihar_Pryshchepau\Downloads\BILT\BILT_119.apk"/>
         <classes>
             <!--class name="android.tablets.tests.AnalyticsTest"/-->
             <!--class name="android.tablets.tests.SmokeTabletTest"/-->

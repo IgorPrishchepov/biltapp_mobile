@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Smoke Test" duration-ms="19528" started-at="2016-05-17T11:56:47Z" finished-at="2016-05-17T11:57:06Z">
+  <suite name="Smoke Test" duration-ms="19833" started-at="2016-05-17T12:06:50Z" finished-at="2016-05-17T12:07:10Z">
     <groups>
     </groups>
-    <test name="Android Tablet Smoke" duration-ms="19528" started-at="2016-05-17T11:56:47Z" finished-at="2016-05-17T11:57:06Z">
+    <test name="Android Tablet Smoke" duration-ms="19833" started-at="2016-05-17T12:06:50Z" finished-at="2016-05-17T12:07:10Z">
       <class name="android.tablets.tests.SandBoxTest">
-        <test-method status="PASS" signature="setupDriver(java.lang.String)[pri:0, instance:android.tablets.tests.SandBoxTest@60addb54]" name="setupDriver" is-config="true" duration-ms="14015" started-at="2016-05-17T14:56:47Z" finished-at="2016-05-17T14:57:01Z">
+        <test-method status="PASS" signature="setupDriver(java.lang.String)[pri:0, instance:android.tablets.tests.SandBoxTest@60addb54]" name="setupDriver" is-config="true" duration-ms="14128" started-at="2016-05-17T15:06:50Z" finished-at="2016-05-17T15:07:04Z">
           <params>
             <param index="0">
               <value>
@@ -18,11 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupDriver -->
-        <test-method status="PASS" signature="skipIntro()[pri:0, instance:android.tablets.tests.SandBoxTest@60addb54]" name="skipIntro" duration-ms="4237" started-at="2016-05-17T14:57:01Z" finished-at="2016-05-17T14:57:05Z">
+        <test-method status="PASS" signature="skipIntro()[pri:0, instance:android.tablets.tests.SandBoxTest@60addb54]" name="skipIntro" duration-ms="4548" started-at="2016-05-17T15:07:04Z" finished-at="2016-05-17T15:07:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- skipIntro -->
-        <test-method status="PASS" signature="closeDriver()[pri:0, instance:android.tablets.tests.SandBoxTest@60addb54]" name="closeDriver" is-config="true" duration-ms="1269" started-at="2016-05-17T14:57:05Z" finished-at="2016-05-17T14:57:06Z">
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:android.tablets.tests.SandBoxTest@60addb54]" name="closeDriver" is-config="true" duration-ms="1148" started-at="2016-05-17T15:07:09Z" finished-at="2016-05-17T15:07:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->

@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Smoke Test" verbose="1" thread-count="1">
+
+
+    <test enabled="true" name="Android Tablet Smoke" preserve-order="true">
+        <parameter name="driverType" value="android"/>
+        <parameter name="appPath" value="D:\PROJECTS\BILT\AUTOTEST_MANAGEMENT\BUILDS\BILT-preprod-release.apk"/>
+        <parameter name="deviceName" value=""/>
+        <classes>
+            <!--class name="android.tablets.tests.SmokeTabletTest"/-->
+            <!--class name="android.tablets.tests.CriticalPassTest"/-->
+            <class name="android.tablets.tests.SandBoxTest"/>
+            <!--class name="android.tablets.tests.AnalyticsTest"/-->
+        </classes>
+    </test>
+</suite>
